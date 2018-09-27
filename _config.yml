@@ -79,5 +79,6 @@ theme: cactus-light
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
+  branch: master
   repository: https://github.com/QM36/QM36.github.io.git
   branch: master
