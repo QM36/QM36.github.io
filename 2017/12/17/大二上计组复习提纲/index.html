@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="title:大二上计组复习提纲第一章1. 冯·诺依曼体系 用二进制代码表示程序和数据 计算机采用存储程序的工作方式：将程序指令和数据存储起来(存储程序),让计算机自动地执行指令,完成各种复杂的运算操作(称为程序控制) 计算机硬件由存储器、运算器、控制器、输入设备和输出设备组成2. 多机系统结构根据处理器之间连接的紧密程度 紧密耦合系统：多个（CPU+LM）组，通过系统总线构成多机系统，共享全局M">
+<meta property="og:type" content="article">
+<meta property="og:title" content="QM36&#39;S BLOG">
+<meta property="og:url" content="https://qm36.github.io/2017/12/17/大二上计组复习提纲/index.html">
+<meta property="og:site_name" content="QM36&#39;S BLOG">
+<meta property="og:description" content="title:大二上计组复习提纲第一章1. 冯·诺依曼体系 用二进制代码表示程序和数据 计算机采用存储程序的工作方式：将程序指令和数据存储起来(存储程序),让计算机自动地执行指令,完成各种复杂的运算操作(称为程序控制) 计算机硬件由存储器、运算器、控制器、输入设备和输出设备组成2. 多机系统结构根据处理器之间连接的紧密程度 紧密耦合系统：多个（CPU+LM）组，通过系统总线构成多机系统，共享全局M">
+<meta property="og:updated_time" content="2017-12-20T07:30:58.111Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="QM36&#39;S BLOG">
+<meta name="twitter:description" content="title:大二上计组复习提纲第一章1. 冯·诺依曼体系 用二进制代码表示程序和数据 计算机采用存储程序的工作方式：将程序指令和数据存储起来(存储程序),让计算机自动地执行指令,完成各种复杂的运算操作(称为程序控制) 计算机硬件由存储器、运算器、控制器、输入设备和输出设备组成2. 多机系统结构根据处理器之间连接的紧密程度 紧密耦合系统：多个（CPU+LM）组，通过系统总线构成多机系统，共享全局M">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>QM36&#39;S BLOG</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/QM36">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2017/12/25/数字媒体导论复习/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2017/12/14/项目计划书（大二上）/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://qm36.github.io/2017/12/17/大二上计组复习提纲/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://qm36.github.io/2017/12/17/大二上计组复习提纲/&text="><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://qm36.github.io/2017/12/17/大二上计组复习提纲/&title="><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://qm36.github.io/2017/12/17/大二上计组复习提纲/&is_video=false&description="><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=&body=Check out this article: https://qm36.github.io/2017/12/17/大二上计组复习提纲/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://qm36.github.io/2017/12/17/大二上计组复习提纲/&title="><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://qm36.github.io/2017/12/17/大二上计组复习提纲/&title="><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://qm36.github.io/2017/12/17/大二上计组复习提纲/&title="><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://qm36.github.io/2017/12/17/大二上计组复习提纲/&title="><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://qm36.github.io/2017/12/17/大二上计组复习提纲/&name=&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title-大二上计组复习提纲"><span class="toc-number">1.</span> <span class="toc-text"><a href="#title-&#x5927;&#x4E8C;&#x4E0A;&#x8BA1;&#x7EC4;&#x590D;&#x4E60;&#x63D0;&#x7EB2;" class="headerlink" title="title:&#x5927;&#x4E8C;&#x4E0A;&#x8BA1;&#x7EC4;&#x590D;&#x4E60;&#x63D0;&#x7EB2;"></a>title:&#x5927;&#x4E8C;&#x4E0A;&#x8BA1;&#x7EC4;&#x590D;&#x4E60;&#x63D0;&#x7EB2;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第一章"><span class="toc-number">2.</span> <span class="toc-text"><a href="#&#x7B2C;&#x4E00;&#x7AE0;" class="headerlink" title="&#x7B2C;&#x4E00;&#x7AE0;"></a>&#x7B2C;&#x4E00;&#x7AE0;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-冯·诺依曼体系"><span class="toc-number">2.0.1.</span> <span class="toc-text"><a href="#1-&#x51AF;&#xB7;&#x8BFA;&#x4F9D;&#x66FC;&#x4F53;&#x7CFB;" class="headerlink" title="1. &#x51AF;&#xB7;&#x8BFA;&#x4F9D;&#x66FC;&#x4F53;&#x7CFB;"></a>1. &#x51AF;&#xB7;&#x8BFA;&#x4F9D;&#x66FC;&#x4F53;&#x7CFB;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-多机系统结构"><span class="toc-number">2.0.2.</span> <span class="toc-text"><a href="#2-&#x591A;&#x673A;&#x7CFB;&#x7EDF;&#x7ED3;&#x6784;" class="headerlink" title="2. &#x591A;&#x673A;&#x7CFB;&#x7EDF;&#x7ED3;&#x6784;"></a>2. &#x591A;&#x673A;&#x7CFB;&#x7EDF;&#x7ED3;&#x6784;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-语言处理程序几个名词概念"><span class="toc-number">2.0.3.</span> <span class="toc-text"><a href="#3-&#x8BED;&#x8A00;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x51E0;&#x4E2A;&#x540D;&#x8BCD;&#x6982;&#x5FF5;" class="headerlink" title="3.&#x8BED;&#x8A00;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x51E0;&#x4E2A;&#x540D;&#x8BCD;&#x6982;&#x5FF5;"></a>3.&#x8BED;&#x8A00;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x51E0;&#x4E2A;&#x540D;&#x8BCD;&#x6982;&#x5FF5;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-计算机系统的性能指标"><span class="toc-number">2.0.4.</span> <span class="toc-text"><a href="#4-&#x8BA1;&#x7B97;&#x673A;&#x7CFB;&#x7EDF;&#x7684;&#x6027;&#x80FD;&#x6307;&#x6807;" class="headerlink" title="4. &#x8BA1;&#x7B97;&#x673A;&#x7CFB;&#x7EDF;&#x7684;&#x6027;&#x80FD;&#x6307;&#x6807;"></a>4. &#x8BA1;&#x7B97;&#x673A;&#x7CFB;&#x7EDF;&#x7684;&#x6027;&#x80FD;&#x6307;&#x6807;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-存储程序的工作方式"><span class="toc-number">2.0.5.</span> <span class="toc-text"><a href="#5-&#x5B58;&#x50A8;&#x7A0B;&#x5E8F;&#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;" class="headerlink" title="5. &#x5B58;&#x50A8;&#x7A0B;&#x5E8F;&#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;"></a>5. &#x5B58;&#x50A8;&#x7A0B;&#x5E8F;&#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-机器字长、存储字长、指令字长的区别于联系"><span class="toc-number">2.0.6.</span> <span class="toc-text"><a href="#6-&#x673A;&#x5668;&#x5B57;&#x957F;&#x3001;&#x5B58;&#x50A8;&#x5B57;&#x957F;&#x3001;&#x6307;&#x4EE4;&#x5B57;&#x957F;&#x7684;&#x533A;&#x522B;&#x4E8E;&#x8054;&#x7CFB;" class="headerlink" title="6.&#x673A;&#x5668;&#x5B57;&#x957F;&#x3001;&#x5B58;&#x50A8;&#x5B57;&#x957F;&#x3001;&#x6307;&#x4EE4;&#x5B57;&#x957F;&#x7684;&#x533A;&#x522B;&#x4E8E;&#x8054;&#x7CFB;"></a>6.&#x673A;&#x5668;&#x5B57;&#x957F;&#x3001;&#x5B58;&#x50A8;&#x5B57;&#x957F;&#x3001;&#x6307;&#x4EE4;&#x5B57;&#x957F;&#x7684;&#x533A;&#x522B;&#x4E8E;&#x8054;&#x7CFB;</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二章"><span class="toc-number">3.</span> <span class="toc-text"><a href="#&#x7B2C;&#x4E8C;&#x7AE0;" class="headerlink" title="&#x7B2C;&#x4E8C;&#x7AE0;"></a>&#x7B2C;&#x4E8C;&#x7AE0;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-三种进制的转换"><span class="toc-number">3.0.1.</span> <span class="toc-text"><a href="#1-&#x4E09;&#x79CD;&#x8FDB;&#x5236;&#x7684;&#x8F6C;&#x6362;" class="headerlink" title="1. &#x4E09;&#x79CD;&#x8FDB;&#x5236;&#x7684;&#x8F6C;&#x6362;"></a>1. &#x4E09;&#x79CD;&#x8FDB;&#x5236;&#x7684;&#x8F6C;&#x6362;</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">QM36'S BLOG</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-12-17T13:41:11.458Z" itemprop="datePublished">2017-12-17</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <hr>
+<h2 id="title-大二上计组复习提纲"><a href="#title-大二上计组复习提纲" class="headerlink" title="title:大二上计组复习提纲"></a>title:大二上计组复习提纲</h2><h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h4 id="1-冯·诺依曼体系"><a href="#1-冯·诺依曼体系" class="headerlink" title="1. 冯·诺依曼体系"></a>1. 冯·诺依曼体系</h4><ol>
+<li>用二进制代码表示程序和数据</li>
+<li>计算机采用存储程序的工作方式：<br>将程序指令和数据存储起来(存储程序),让计算机自动地执行指令,完成各种复杂的运算操作(称为程序控制)</li>
+<li>计算机硬件由存储器、运算器、控制器、输入设备和输出设备组成<h4 id="2-多机系统结构"><a href="#2-多机系统结构" class="headerlink" title="2. 多机系统结构"></a>2. 多机系统结构</h4>根据处理器之间连接的紧密程度</li>
+<li>紧密耦合系统：多个（CPU+LM）组，通过系统总线构成多机系统，共享全局M</li>
+<li>松散耦合系统:多个节点，由通信接口CAS并通过MTS构成多机系统<h4 id="3-语言处理程序几个名词概念"><a href="#3-语言处理程序几个名词概念" class="headerlink" title="3.语言处理程序几个名词概念"></a>3.语言处理程序几个名词概念</h4></li>
+<li>翻译程序：指把高级语言源程序翻译成机器语言程序（目标代码）的软件。（分为编译程序和解释程序）</li>
+<li>编译程序：将高级语言一次翻译成目标程序，每次执行程序的时候，只执行目标程序。</li>
+<li>解释程序：将源程序的一条语句翻译成目标代码，并立即执行，然后翻译下一条语句…,直至执行完最后一条语句。程序的执行过程中，不能脱离源程序和解释程序。</li>
+<li>汇编程序：将汇编语言的源程序编译成机器语言程序。</li>
+<li>编程语言分类：</li>
+</ol>
+<ul>
+<li>机器语言：二进制代码0/1表示机器指令。</li>
+<li>汇编语言：用助记符按规定格式表示各种机器指令。汇编语言的源程序必须经过汇编程序的编译，将其转换为机器语言后才能被机器执行。</li>
+<li>高级语言：用类似自然语言的符号表示各种指令。通常高级语言需要经过<strong>编译程序</strong>编译成汇编语言程序，然后再通过<strong>汇编程序</strong>编译成机器语言。或者有解释程序翻译成机器语言。<h4 id="4-计算机系统的性能指标"><a href="#4-计算机系统的性能指标" class="headerlink" title="4. 计算机系统的性能指标"></a>4. 计算机系统的性能指标</h4></li>
+</ul>
+<ol>
+<li>基本字长：指一次操作的基本位数。<br>它影响计算精度、指令功能。</li>
+<li>外频：外部频率或基频，也叫系统时钟频率</li>
+<li>运算速度：</li>
+</ol>
+<ul>
+<li>（1）CPU主频=外频×倍频系数；</li>
+<li>（2）IPS，每秒执行指令数；</li>
+<li>（3）CPI，即Clock-cycle Per Instruction ；</li>
+<li>（4）FLOPS，每秒执行浮点运算的次数；</li>
+</ul>
+<ol>
+<li>数据传输率：单位时间的数据传输量（比特每秒bit/s）</li>
+<li>存储容量<h4 id="5-存储程序的工作方式"><a href="#5-存储程序的工作方式" class="headerlink" title="5. 存储程序的工作方式"></a>5. 存储程序的工作方式</h4></li>
+<li>事先编制程序</li>
+<li>事先存储程序</li>
+<li>自动、连续的执行程序</li>
+<li>输出结果<h4 id="6-机器字长、存储字长、指令字长的区别于联系"><a href="#6-机器字长、存储字长、指令字长的区别于联系" class="headerlink" title="6.机器字长、存储字长、指令字长的区别于联系"></a>6.机器字长、存储字长、指令字长的区别于联系</h4></li>
+<li>机器字长：计算机直接处理的二进制数据位数，<strong>机器字长等于寄存器的大小</strong>，他决定计算机运算精度。</li>
+<li>存储字长：一个<strong>存储单元</strong>中包含的<strong>二进制代码的位数</strong>。</li>
+<li>指令字长：一条<strong>指令</strong>中包含的二进制代码的位数。</li>
+<li>==指令字长一般是存储字长的整数倍，如果指令字长等于存储字长的2倍，需要2次访存来取出指令，因此，取指周期是机器周期的2倍。==<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h4 id="1-三种进制的转换"><a href="#1-三种进制的转换" class="headerlink" title="1. 三种进制的转换"></a>1. 三种进制的转换</h4></li>
+<li>十进制转二进制：整数部分除基取余（高位在下），小数部分乘基取整（高位在上）</li>
+<li>二进制转十进制：按权相加</li>
+<li>二进制转十六进制：四位一起，整数部分前面加0，小数部分后面加0</li>
+<li>十六进制转二进制：一位拆成四位</li>
+<li>十进制与十六进制的转换通过二进制</li>
+<li>符号数的表示：</li>
+</ol>
+<ul>
+<li>真值：-139、139</li>
+<li>机器数：计算机内部使用的分为原码补码反码（连同符号位一起数字化）</li>
+<li>原码：最高位为符号位，其余各数值不变（正0负1）<strong>注意</strong>：0的表示形式，[+0] = 00000000；[-0] = 10000000</li>
+<li>反码：正数的反码等于原码，负数的反码符号位仍为1，各数值按位取反 <strong>注意</strong>：0的表示形式，[+0] = 00000000;[-0] = 11111111</li>
+<li>补码：正数的补码等于原码，负数的补码符号位为1，数值为按位取反再加1，即反码+1  <strong>注意</strong>：0的表示形式：[+0] = [-0] = 00000000</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/QM36">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title-大二上计组复习提纲"><span class="toc-number">1.</span> <span class="toc-text"><a href="#title-&#x5927;&#x4E8C;&#x4E0A;&#x8BA1;&#x7EC4;&#x590D;&#x4E60;&#x63D0;&#x7EB2;" class="headerlink" title="title:&#x5927;&#x4E8C;&#x4E0A;&#x8BA1;&#x7EC4;&#x590D;&#x4E60;&#x63D0;&#x7EB2;"></a>title:&#x5927;&#x4E8C;&#x4E0A;&#x8BA1;&#x7EC4;&#x590D;&#x4E60;&#x63D0;&#x7EB2;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第一章"><span class="toc-number">2.</span> <span class="toc-text"><a href="#&#x7B2C;&#x4E00;&#x7AE0;" class="headerlink" title="&#x7B2C;&#x4E00;&#x7AE0;"></a>&#x7B2C;&#x4E00;&#x7AE0;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-冯·诺依曼体系"><span class="toc-number">2.0.1.</span> <span class="toc-text"><a href="#1-&#x51AF;&#xB7;&#x8BFA;&#x4F9D;&#x66FC;&#x4F53;&#x7CFB;" class="headerlink" title="1. &#x51AF;&#xB7;&#x8BFA;&#x4F9D;&#x66FC;&#x4F53;&#x7CFB;"></a>1. &#x51AF;&#xB7;&#x8BFA;&#x4F9D;&#x66FC;&#x4F53;&#x7CFB;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-多机系统结构"><span class="toc-number">2.0.2.</span> <span class="toc-text"><a href="#2-&#x591A;&#x673A;&#x7CFB;&#x7EDF;&#x7ED3;&#x6784;" class="headerlink" title="2. &#x591A;&#x673A;&#x7CFB;&#x7EDF;&#x7ED3;&#x6784;"></a>2. &#x591A;&#x673A;&#x7CFB;&#x7EDF;&#x7ED3;&#x6784;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-语言处理程序几个名词概念"><span class="toc-number">2.0.3.</span> <span class="toc-text"><a href="#3-&#x8BED;&#x8A00;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x51E0;&#x4E2A;&#x540D;&#x8BCD;&#x6982;&#x5FF5;" class="headerlink" title="3.&#x8BED;&#x8A00;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x51E0;&#x4E2A;&#x540D;&#x8BCD;&#x6982;&#x5FF5;"></a>3.&#x8BED;&#x8A00;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x51E0;&#x4E2A;&#x540D;&#x8BCD;&#x6982;&#x5FF5;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-计算机系统的性能指标"><span class="toc-number">2.0.4.</span> <span class="toc-text"><a href="#4-&#x8BA1;&#x7B97;&#x673A;&#x7CFB;&#x7EDF;&#x7684;&#x6027;&#x80FD;&#x6307;&#x6807;" class="headerlink" title="4. &#x8BA1;&#x7B97;&#x673A;&#x7CFB;&#x7EDF;&#x7684;&#x6027;&#x80FD;&#x6307;&#x6807;"></a>4. &#x8BA1;&#x7B97;&#x673A;&#x7CFB;&#x7EDF;&#x7684;&#x6027;&#x80FD;&#x6307;&#x6807;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-存储程序的工作方式"><span class="toc-number">2.0.5.</span> <span class="toc-text"><a href="#5-&#x5B58;&#x50A8;&#x7A0B;&#x5E8F;&#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;" class="headerlink" title="5. &#x5B58;&#x50A8;&#x7A0B;&#x5E8F;&#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;"></a>5. &#x5B58;&#x50A8;&#x7A0B;&#x5E8F;&#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-机器字长、存储字长、指令字长的区别于联系"><span class="toc-number">2.0.6.</span> <span class="toc-text"><a href="#6-&#x673A;&#x5668;&#x5B57;&#x957F;&#x3001;&#x5B58;&#x50A8;&#x5B57;&#x957F;&#x3001;&#x6307;&#x4EE4;&#x5B57;&#x957F;&#x7684;&#x533A;&#x522B;&#x4E8E;&#x8054;&#x7CFB;" class="headerlink" title="6.&#x673A;&#x5668;&#x5B57;&#x957F;&#x3001;&#x5B58;&#x50A8;&#x5B57;&#x957F;&#x3001;&#x6307;&#x4EE4;&#x5B57;&#x957F;&#x7684;&#x533A;&#x522B;&#x4E8E;&#x8054;&#x7CFB;"></a>6.&#x673A;&#x5668;&#x5B57;&#x957F;&#x3001;&#x5B58;&#x50A8;&#x5B57;&#x957F;&#x3001;&#x6307;&#x4EE4;&#x5B57;&#x957F;&#x7684;&#x533A;&#x522B;&#x4E8E;&#x8054;&#x7CFB;</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二章"><span class="toc-number">3.</span> <span class="toc-text"><a href="#&#x7B2C;&#x4E8C;&#x7AE0;" class="headerlink" title="&#x7B2C;&#x4E8C;&#x7AE0;"></a>&#x7B2C;&#x4E8C;&#x7AE0;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-三种进制的转换"><span class="toc-number">3.0.1.</span> <span class="toc-text"><a href="#1-&#x4E09;&#x79CD;&#x8FDB;&#x5236;&#x7684;&#x8F6C;&#x6362;" class="headerlink" title="1. &#x4E09;&#x79CD;&#x8FDB;&#x5236;&#x7684;&#x8F6C;&#x6362;"></a>1. &#x4E09;&#x79CD;&#x8FDB;&#x5236;&#x7684;&#x8F6C;&#x6362;</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://qm36.github.io/2017/12/17/大二上计组复习提纲/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://qm36.github.io/2017/12/17/大二上计组复习提纲/&text="><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://qm36.github.io/2017/12/17/大二上计组复习提纲/&title="><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://qm36.github.io/2017/12/17/大二上计组复习提纲/&is_video=false&description="><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=&body=Check out this article: https://qm36.github.io/2017/12/17/大二上计组复习提纲/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://qm36.github.io/2017/12/17/大二上计组复习提纲/&title="><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://qm36.github.io/2017/12/17/大二上计组复习提纲/&title="><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://qm36.github.io/2017/12/17/大二上计组复习提纲/&title="><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://qm36.github.io/2017/12/17/大二上计组复习提纲/&title="><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://qm36.github.io/2017/12/17/大二上计组复习提纲/&name=&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 qumeng
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/QM36">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
