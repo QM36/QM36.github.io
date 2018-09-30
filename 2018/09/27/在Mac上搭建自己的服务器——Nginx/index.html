@@ -12,7 +12,6 @@
 <meta property="og:url" content="https://qm36.github.io/2018/09/27/在Mac上搭建自己的服务器——Nginx/index.html">
 <meta property="og:site_name" content="QM36&#39;S BLOG">
 <meta property="og:description" content="目的 在本地起一个服务进程，在浏览器中输入localhost:8080即可访问nginx欢迎页,如下图所示    再能够把自己的项目部署上去，在浏览器中输入localhost:8080即可访问自己的页面  准备 brew  安装方法：在终端输入一下内容  1/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/H">
-<meta property="og:locale" content="default">
 <meta property="og:image" content="http://p4k6er8dp.bkt.clouddn.com/18-9-25/71679971.jpg">
 <meta property="og:image" content="http://p4k6er8dp.bkt.clouddn.com/18-9-25/23771489.jpg">
 <meta property="og:image" content="http://p4k6er8dp.bkt.clouddn.com/18-9-25/4277388.jpg">
@@ -62,9 +61,9 @@
          
           <li><a href="/about/">About</a></li>
          
-          <li><a href="/QM36">Writing</a></li>
+          <li><a href="/archives/">Writing</a></li>
          
-          <li><a href="http://github.com/probberechts">Projects</a></li>
+          <li><a href="http://github.com/gabithume">Projects</a></li>
         
       </ul>
     </span>
@@ -72,13 +71,11 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/2018/09/27/在Mac上搭建自己的服务器——tomcat/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" href="/2018/09/27/Python自学笔记/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
         
         
-        <li><a class="icon" href="/2018/09/27/基于nginx在centos7.5云服务器上部署web项目/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
       </ul>
       <span id="i-prev" class="info" style="display:none;">Previous post</span>
       <span id="i-next" class="info" style="display:none;">Next post</span>
@@ -102,7 +99,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目的"><span class="toc-number">1.</span> <span class="toc-text">目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-number">2.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署过程"><span class="toc-number">3.</span> <span class="toc-text">部署过程</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目的"><span class="toc-number">1.</span> <span class="toc-text"><a href="#&#x76EE;&#x7684;" class="headerlink" title="&#x76EE;&#x7684;"></a>&#x76EE;&#x7684;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-number">2.</span> <span class="toc-text"><a href="#&#x51C6;&#x5907;" class="headerlink" title="&#x51C6;&#x5907;"></a>&#x51C6;&#x5907;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署过程"><span class="toc-number">3.</span> <span class="toc-text"><a href="#&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;" class="headerlink" title="&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;"></a>&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -212,15 +209,15 @@
          
           <li><a href="/about/">About</a></li>
          
-          <li><a href="/QM36">Writing</a></li>
+          <li><a href="/archives/">Writing</a></li>
          
-          <li><a href="http://github.com/probberechts">Projects</a></li>
+          <li><a href="http://github.com/gabithume">Projects</a></li>
         
       </ul>
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目的"><span class="toc-number">1.</span> <span class="toc-text">目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-number">2.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署过程"><span class="toc-number">3.</span> <span class="toc-text">部署过程</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目的"><span class="toc-number">1.</span> <span class="toc-text"><a href="#&#x76EE;&#x7684;" class="headerlink" title="&#x76EE;&#x7684;"></a>&#x76EE;&#x7684;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-number">2.</span> <span class="toc-text"><a href="#&#x51C6;&#x5907;" class="headerlink" title="&#x51C6;&#x5907;"></a>&#x51C6;&#x5907;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署过程"><span class="toc-number">3.</span> <span class="toc-text"><a href="#&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;" class="headerlink" title="&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;"></a>&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
@@ -241,10 +238,10 @@
 
     <div id="actions-footer">
       <ul>
-        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
-        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
         <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
-        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
       </ul>
     </div>
 
@@ -264,9 +261,9 @@
          
           <li><a href="/about/">About</a></li>
          
-          <li><a href="/QM36">Writing</a></li>
+          <li><a href="/archives/">Writing</a></li>
          
-          <li><a href="http://github.com/probberechts">Projects</a></li>
+          <li><a href="http://github.com/gabithume">Projects</a></li>
         
       </ul>
     </nav>
@@ -280,12 +277,11 @@
 <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
 <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
 
+
 <!-- jquery -->
 <script src="/lib/jquery/jquery.min.js"></script>
 <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
 <script src="/js/main.js"></script>
-<!-- search -->
-
 <!-- Google Analytics -->
 
     <script type="text/javascript">
