@@ -42,7 +42,7 @@ sh startup.sh
 	sh shutdown.sh
 	```
 	
-	> 注意以上命令都需要在`/bin`的路径，即`startup.sh`与`shutdown.sh`存在的文件夹中使用
+> 注意以上命令都需要在`/bin`的路径，即`startup.sh`与`shutdown.sh`存在的文件夹中使用
 
 5. 在浏览器中输入`localhost:8080/mood`，就可以访问你的项目页面了，最终展示如下
 

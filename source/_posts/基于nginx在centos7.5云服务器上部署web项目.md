@@ -25,6 +25,7 @@ service nginx start
 > 注意，因为我的云服务器没有提醒我现在在哪个分支，所以导致`400`展示出来的就是空白页，所以你需要首先`git branch`查看当前分支，如果有需要再`git checkout name`去切换分支
 
 3. 接下来就是一个关键步骤了，你需要用`vim`在`nginx`配置文件中修改配置
+	
 	* 查看其配置文件的所在位置
 	```
 	nginx -t
@@ -38,6 +39,7 @@ service nginx start
 	vim /etc/nginx/nginx.conf
 	```
 	
+	
 	* 进入配置文件之后，和在本地配置的方式一样，`location`之后配置如图所示
 	
 	![](http://p4k6er8dp.bkt.clouddn.com/18-9-26/37835232.jpg)
@@ -45,10 +47,13 @@ service nginx start
 	> 注意，文件顶部的`user`之后是不是`root`否则会出现`403`的权限问题
 
 	* `wq`保存并退出`vim`
+	
 	* 重启nginx
+	
 	```
 	service nginx restart
 	```
+
 4. 这时候就可以在浏览器中输自己云服务器的公网IP去查看自己的项目了，结果如下图所示
 
 ![](http://p4k6er8dp.bkt.clouddn.com/18-9-26/9209429.jpg)
