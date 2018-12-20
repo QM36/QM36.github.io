@@ -622,13 +622,7 @@ alert(obj instanceof String); //true
     * **其他方法**:`Math`对象中还包含其它一些有关计算的方法，以下是`Math`对象其它方法
     
     ![](https://ws1.sinaimg.cn/large/006XqmrNly1fwi6c3mz23j30xa07umyu.jpg)
-    
-    
-    
-
-
-
-    
+        
 ## 问题
 1. 加标签的label语句没看懂有什么用
 2. 如何理解函数参数是按值传递的
