@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="QM36&#39;S BLOG">
 <meta property="og:description" content="讲一讲你做的动漫素材收集系统 我负责的前端的UI与实现。因为是组长，所以比较清楚整个系统的组成，分三个部分爬虫后端和前端，爬虫负责从网上爬取关于动漫的图片，然后后端整理数据提供接口，前端利用接口展示数据。整个前端分为搜索图片，展示图片和处理图片三个部分。主要的难点部分在于对于素材的处理部分，这里有点类似在线ps，实现了对图片进行画笔操作以及滤镜操作，这里我用的是canvas。因为有画笔和橡皮擦所">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006BuqcWly1fyi3475nftj308k0gywfz.jpg">
-<meta property="og:updated_time" content="2018-12-24T12:20:46.212Z">
+<meta property="og:updated_time" content="2018-12-24T13:28:54.377Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="爱奇艺一面（2018.12.24）（20分钟）">
 <meta name="twitter:description" content="讲一讲你做的动漫素材收集系统 我负责的前端的UI与实现。因为是组长，所以比较清楚整个系统的组成，分三个部分爬虫后端和前端，爬虫负责从网上爬取关于动漫的图片，然后后端整理数据提供接口，前端利用接口展示数据。整个前端分为搜索图片，展示图片和处理图片三个部分。主要的难点部分在于对于素材的处理部分，这里有点类似在线ps，实现了对图片进行画笔操作以及滤镜操作，这里我用的是canvas。因为有画笔和橡皮擦所">
@@ -68,6 +68,8 @@
     <br/>
     <span id="actions">
       <ul>
+        
+        <li><a class="icon" href="/2018/12/25/滴滴一面/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
         
         
         <li><a class="icon" href="/2018/12/20/头条一面笔试/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
@@ -149,14 +151,14 @@
 <li><p>用<code>jquery</code>给元素绑定事件</p>
 <blockquote>
 <p>比如用点击事件为例：</p>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#bala"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 </blockquote>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#bala"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>用<code>jquery</code>获取一个<code>dom</code>元素中的值</p>
 <blockquote>
 <p>如果是一个div的话直接用它的<code>id</code>或<code>class</code>选中之后，有<code>innerHTML</code>和<code>innerText</code>属性可以获得。如果是多个<code>div</code>的话涉及冒泡事件，只需要给父节点绑定事件，然后如下代码所示：</p>
 </blockquote>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"$bala"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> value = event.target;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#bala"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> value = event.target;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>jquery</code>的选择器</p>
 <blockquote>
@@ -171,14 +173,15 @@
 <blockquote>
 <p><code>jquery</code>不知道，但是我写过原生的<code>ajax</code>,就是用<code>XMLHttpRequest</code>时候，我记得有属性可以改变同步还是异步，代码如下</p>
 </blockquote>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">loadXMLDoc</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> xmlhttp;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">window</span>.XMLHttpRequest)&#123;<span class="comment">// code for IE7+, Firefox, Chrome, Opera, Safari</span></span><br><span class="line">		xmlhttp=<span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;<span class="comment">// code for IE6, IE5</span></span><br><span class="line">		xmlhttp=<span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	xmlhttp.onreadystatechange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	  	<span class="keyword">if</span> (xmlhttp.readyState==<span class="number">4</span> &amp;&amp; xmlhttp.status==<span class="number">200</span>)&#123;</span><br><span class="line">	    	<span class="built_in">document</span>.getElementById(<span class="string">"myDiv"</span>).innerHTML=xmlhttp.responseText;</span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">	xmlhttp.open(<span class="string">"GET"</span>,<span class="string">"/ajax/demo_get.asp"</span>,<span class="literal">true</span>);</span><br><span class="line">	xmlhttp.send();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>css</code>选择器</p>
-<blockquote>
-<p>基于<code>id</code>和类的选择器，追问如果要选择所有的<code>a</code>标签的话，怎么做，答可以根据标签选择，也可以基于继承关系选择所有子元素，已经下一级子元素。其实标准的答案应该涉及下图内容</p>
-</blockquote>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">loadXMLDoc</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> xmlhttp;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">window</span>.XMLHttpRequest)&#123;<span class="comment">// code for IE7+, Firefox, Chrome, Opera, Safari</span></span><br><span class="line">		xmlhttp=<span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;<span class="comment">// code for IE6, IE5</span></span><br><span class="line">		xmlhttp=<span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	xmlhttp.onreadystatechange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	  	<span class="keyword">if</span> (xmlhttp.readyState==<span class="number">4</span> &amp;&amp; xmlhttp.status==<span class="number">200</span>)&#123;</span><br><span class="line">	    	<span class="built_in">document</span>.getElementById(<span class="string">"myDiv"</span>).innerHTML=xmlhttp.responseText;</span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">	xmlhttp.open(<span class="string">"GET"</span>,<span class="string">"/ajax/demo_get.asp"</span>,<span class="literal">true</span>); <span class="comment">//最后一个参数同步true，异步false</span></span><br><span class="line">	xmlhttp.send();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<blockquote>
+<p>经查证之后发现<code>$.ajax()</code>方法有<code>async</code>属性可以设置同步或异步,参数要求为<code>Boolean</code>类型，默认设置为<code>true</code>，所有请求均为异步请求。如果需要发送同步请求，请将此选项设置为<code>false</code>。注意，同步请求将锁住浏览器，用户其他操作必须等待请求完成才可以执行。</p>
+<ol>
+<li><code>css</code>选择器<br>基于<code>id</code>和类的选择器，追问如果要选择所有的<code>a</code>标签的话，怎么做，答可以根据标签选择，也可以基于继承关系选择所有子元素，已经下一级子元素。其实标准的答案应该涉及下图内容</li>
+</ol>
+</blockquote>
 <p><img src="https://ws1.sinaimg.cn/large/006BuqcWly1fyi3475nftj308k0gywfz.jpg" alt=""></p>
 <ol>
 <li><code>disable</code>和<code>readonly</code>的区别<blockquote>
@@ -210,7 +213,7 @@
 </blockquote>
 </li>
 <li>用<code>css</code>实现两个<code>div</code>处在同一行<blockquote>
-<p>绝对定位，<code>float</code>，<code>inner-block</code>，<code>felx</code></p>
+<p>绝对定位，<code>float</code>，<code>inline-block</code>，<code>flex</code></p>
 </blockquote>
 </li>
 <li>前端<code>UI</code>库用过没有，具体怎么用的<blockquote>
@@ -225,7 +228,18 @@
 <p>看文档，学习<code>github</code>上的<code>demo</code></p>
 </blockquote>
 </li>
-<li>入职时间<blockquote>
+<li>了解的js弹框<blockquote>
+<p>只知道alert弹框<br><a href="http://www.cnblogs.com/asd-sun/p/6560195.html" target="_blank" rel="noopener">http://www.cnblogs.com/asd-sun/p/6560195.html</a></p>
+</blockquote>
+</li>
+<li><p>你怎么调用jquery的ajax的</p>
+<blockquote>
+<p>首先规定URL，然后是接口类型，在sucess回调函数中写调用成功之后执行的事情，在error回调函数中写失败之后执行的事情。有两种方式和，如代码所示</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方法一，用post(),get()方法</span></span><br><span class="line">$.post(<span class="string">"/example/jquery/demo_test_post.asp"</span>,</span><br><span class="line">	&#123;</span><br><span class="line">	name:<span class="string">"Donald Duck"</span>,</span><br><span class="line">	city:<span class="string">"Duckburg"</span></span><br><span class="line">   &#125;,</span><br><span class="line">   <span class="function"><span class="keyword">function</span>(<span class="params">data,status</span>)</span>&#123;</span><br><span class="line">     	alert(<span class="string">"数据："</span> + data + <span class="string">"\n状态："</span> + status);</span><br><span class="line">   &#125;);</span><br><span class="line">   $.get(<span class="string">"/example/jquery/demo_test.asp"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data,status</span>)</span>&#123;</span><br><span class="line">     	alert(<span class="string">"数据："</span> + data + <span class="string">"\n状态："</span> + status);</span><br><span class="line">   &#125;);</span><br><span class="line">   <span class="comment">//方法二 用ajax()方法</span></span><br><span class="line">   $.ajax(&#123;</span><br><span class="line">	type: <span class="string">"GET"</span>,<span class="comment">//接口类型</span></span><br><span class="line">	url: <span class="string">"test.json"</span>,</span><br><span class="line">	data: &#123;<span class="attr">username</span>:$(<span class="string">"#username"</span>).val(), <span class="attr">content</span>:$(<span class="string">"#content"</span>).val()&#125;, <span class="comment">//以任意格式都可以</span></span><br><span class="line">	dataType: <span class="string">"json"</span>,</span><br><span class="line">	<span class="keyword">async</span>: <span class="literal">true</span><span class="comment">//同步或异步</span></span><br><span class="line">	success: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">		$(<span class="string">'#resText'</span>).empty();   <span class="comment">//注意有时可能需要清空内容</span></span><br><span class="line">    &#125;,</span><br><span class="line">    error: <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">    	<span class="built_in">console</span>.log(<span class="string">"error"</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">    complete: <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">    	<span class="built_in">console</span>.log(<span class="string">"complete);</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;);</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>入职时间</p>
+<blockquote>
 <p>年后</p>
 </blockquote>
 </li>
