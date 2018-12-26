@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="QM36&#39;S BLOG">
 <meta property="og:description" content="讲一讲你做的动漫素材收集系统 我负责的前端的UI与实现。因为是组长，所以比较清楚整个系统的组成，分三个部分爬虫后端和前端，爬虫负责从网上爬取关于动漫的图片，然后后端整理数据提供接口，前端利用接口展示数据。整个前端分为搜索图片，展示图片和处理图片三个部分。主要的难点部分在于对于素材的处理部分，这里有点类似在线ps，实现了对图片进行画笔操作以及滤镜操作，这里我用的是canvas。因为有画笔和橡皮擦所">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006BuqcWly1fyi3475nftj308k0gywfz.jpg">
-<meta property="og:updated_time" content="2018-12-24T13:28:54.377Z">
+<meta property="og:updated_time" content="2018-12-25T13:42:33.001Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="爱奇艺一面（2018.12.24）（20分钟）">
 <meta name="twitter:description" content="讲一讲你做的动漫素材收集系统 我负责的前端的UI与实现。因为是组长，所以比较清楚整个系统的组成，分三个部分爬虫后端和前端，爬虫负责从网上爬取关于动漫的图片，然后后端整理数据提供接口，前端利用接口展示数据。整个前端分为搜索图片，展示图片和处理图片三个部分。主要的难点部分在于对于素材的处理部分，这里有点类似在线ps，实现了对图片进行画笔操作以及滤镜操作，这里我用的是canvas。因为有画笔和橡皮擦所">
@@ -154,11 +154,14 @@
 </blockquote>
  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#bala"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 </li>
+</ol>
+<p>如要查看详细解答，请看博客<a href="#">用jquery给元素绑定事件</a></p>
+<ol>
 <li><p>用<code>jquery</code>获取一个<code>dom</code>元素中的值</p>
 <blockquote>
 <p>如果是一个div的话直接用它的<code>id</code>或<code>class</code>选中之后，有<code>innerHTML</code>和<code>innerText</code>属性可以获得。如果是多个<code>div</code>的话涉及冒泡事件，只需要给父节点绑定事件，然后如下代码所示：</p>
 </blockquote>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#bala"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> value = event.target;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#bala"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> value = event.target.innerHTML;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>jquery</code>的选择器</p>
 <blockquote>
