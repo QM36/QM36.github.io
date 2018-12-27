@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="聊聊微信小程序 因为比赛，三人组队完成的项目，本人完成的是前端UI设计和部分界面实现。此项目共分三个部分：发送订单，接收订单，以及个人信息管理（姓名、地址、电话号码，历史订单）。   微信小程序里面涉及的难点 轮训机制：订单五分钟失效，订单的状态会隔10秒钟从后台取一次，一旦订单状态为失效就会为用户发送提示，用setTimeout写的   settimeout和setinterval区别 前者是">
+    <meta name="description" content="聊聊微信小程序   因为比赛，三人组队完成的项目，本人完成的是前端UI设计和部分界面实现。此项目共分三个部分：发送订单，接收订单，以及个人信息管理（姓名、地址、电话号码，历史订单）。   微信小程序里面涉及的难点   轮训机制：订单五分钟失效，订单的状态会隔10秒钟从后台取一次，一旦订单状态为失效就会为用户发送提示，用setTimeout写的   settimeout和setinterval区别">
 <meta property="og:type" content="article">
 <meta property="og:title" content="滴滴一面（2018.12.25）">
 <meta property="og:url" content="https://qm36.github.io/2018/12/25/滴滴一面/index.html">
 <meta property="og:site_name" content="QM36&#39;S BLOG">
-<meta property="og:description" content="聊聊微信小程序 因为比赛，三人组队完成的项目，本人完成的是前端UI设计和部分界面实现。此项目共分三个部分：发送订单，接收订单，以及个人信息管理（姓名、地址、电话号码，历史订单）。   微信小程序里面涉及的难点 轮训机制：订单五分钟失效，订单的状态会隔10秒钟从后台取一次，一旦订单状态为失效就会为用户发送提示，用setTimeout写的   settimeout和setinterval区别 前者是">
+<meta property="og:description" content="聊聊微信小程序   因为比赛，三人组队完成的项目，本人完成的是前端UI设计和部分界面实现。此项目共分三个部分：发送订单，接收订单，以及个人信息管理（姓名、地址、电话号码，历史订单）。   微信小程序里面涉及的难点   轮训机制：订单五分钟失效，订单的状态会隔10秒钟从后台取一次，一旦订单状态为失效就会为用户发送提示，用setTimeout写的   settimeout和setinterval区别">
 <meta property="og:updated_time" content="2018-12-25T10:37:27.381Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="滴滴一面（2018.12.25）">
-<meta name="twitter:description" content="聊聊微信小程序 因为比赛，三人组队完成的项目，本人完成的是前端UI设计和部分界面实现。此项目共分三个部分：发送订单，接收订单，以及个人信息管理（姓名、地址、电话号码，历史订单）。   微信小程序里面涉及的难点 轮训机制：订单五分钟失效，订单的状态会隔10秒钟从后台取一次，一旦订单状态为失效就会为用户发送提示，用setTimeout写的   settimeout和setinterval区别 前者是">
+<meta name="twitter:description" content="聊聊微信小程序   因为比赛，三人组队完成的项目，本人完成的是前端UI设计和部分界面实现。此项目共分三个部分：发送订单，接收订单，以及个人信息管理（姓名、地址、电话号码，历史订单）。   微信小程序里面涉及的难点   轮训机制：订单五分钟失效，订单的状态会隔10秒钟从后台取一次，一旦订单状态为失效就会为用户发送提示，用setTimeout写的   settimeout和setinterval区别">
     
     
         
@@ -132,70 +132,102 @@
 
   <div class="content" itemprop="articleBody">
     <ol>
-<li>聊聊微信小程序<blockquote>
+<li>聊聊微信小程序</li>
+</ol>
+<blockquote>
 <p>因为比赛，三人组队完成的项目，本人完成的是前端UI设计和部分界面实现。此项目共分三个部分：发送订单，接收订单，以及个人信息管理（姓名、地址、电话号码，历史订单）。</p>
 </blockquote>
-</li>
-<li>微信小程序里面涉及的难点<blockquote>
+<ol start="2">
+<li>微信小程序里面涉及的难点</li>
+</ol>
+<blockquote>
 <p>轮训机制：订单五分钟失效，订单的状态会隔10秒钟从后台取一次，一旦订单状态为失效就会为用户发送提示，用<code>setTimeout</code>写的</p>
 </blockquote>
-</li>
-<li><code>settimeout</code>和<code>setinterval</code>区别<blockquote>
+<ol start="3">
+<li><code>settimeout</code>和<code>setinterval</code>区别</li>
+</ol>
+<blockquote>
 <p>前者是会保证时间的准确性，后者可能会造成延迟，导致时间不准，如果上一次请求延迟就会引起后面的请求，导致10秒的时间其实不准。</p>
 </blockquote>
-</li>
-<li>聊一聊后台管理系统<blockquote>
+<ol start="4">
+<li>聊一聊后台管理系统</li>
+</ol>
+<blockquote>
 <p><code>bootstarp</code>和<code>jquery</code>写的，管理数据，以表格形式，带有增删查改功能</p>
 </blockquote>
-</li>
-<li>后台管理系统为什么不用框架比如<code>vue</code>?<blockquote>
+<ol start="5">
+<li>后台管理系统为什么不用框架比如<code>vue</code>?</li>
+</ol>
+<blockquote>
 <p>时间紧张，框架不熟，以锻炼基础为主</p>
 </blockquote>
-</li>
-<li>从微信小程序到后台管理系统的开发跨度大不大，有没有什么区别<blockquote>
+<ol start="6">
+<li>从微信小程序到后台管理系统的开发跨度大不大，有没有什么区别</li>
+</ol>
+<blockquote>
 <p>小程序从<code>UI</code>到逻辑层都封装的很好，很多<code>API</code>，写起来比较方便，但是后者比较麻烦，小程序类似一个框架</p>
 </blockquote>
-</li>
-<li>如果判断一个元素是否隐藏，在微信小程序和用<code>jquery</code>中有什么区别<blockquote>
+<ol start="7">
+<li>如果判断一个元素是否隐藏，在微信小程序和用<code>jquery</code>中有什么区别</li>
+</ol>
+<blockquote>
 <p>小程序中用<code>wx-if</code>，后者就需要再<code>js</code>代码里面写，给<code>flag</code>变量控制元素的隐藏与否</p>
 </blockquote>
-</li>
-<li>有没有做过<code>H5</code>的应用<blockquote>
+<ol start="8">
+<li>有没有做过<code>H5</code>的应用</li>
+</ol>
+<blockquote>
 <p>没有，都是做浏览器的PC端</p>
 </blockquote>
-</li>
-<li><code>css</code>的<code>position</code>的理解<blockquote>
+<ol start="9">
+<li><code>css</code>的<code>position</code>的理解</li>
+</ol>
+<blockquote>
 <p>不同的<code>position</code>取值代表对元素位置的不同描述，<code>absolute</code>代表绝对定位，这个绝对相对于父级非<code>static</code>元素定位，<code>relative</code>就是相对定位，<code>static</code>就是默认值，此时元素就会处在正常的文档流中。</p>
 </blockquote>
-</li>
-<li>三个嵌套<code>div</code>，外层是<code>absolute</code>,中间层是<code>static</code>，内层是<code>absolute</code>，内层是相对于哪个的定位<blockquote>
+<ol start="10">
+<li>三个嵌套<code>div</code>，外层是<code>absolute</code>,中间层是<code>static</code>，内层是<code>absolute</code>，内层是相对于哪个的定位</li>
+</ol>
+<blockquote>
 <p>最外层，理由如上一题回答</p>
 </blockquote>
-</li>
-<li><code>css</code>选择器，如果一个元素有两个<code>classname</code>，分别是<code>a</code>和<code>b</code>,如何同时选取<blockquote>
+<ol start="11">
+<li><code>css</code>选择器，如果一个元素有两个<code>classname</code>，分别是<code>a</code>和<code>b</code>,如何同时选取</li>
+</ol>
+<blockquote>
 <p>当时回答的是<code>.a .b {}</code>，被反问这不是包含关系？结果应该是<code>.a.b{}</code>,具体见代码<a href="https://github.com/QM36/JS-test/blob/master/css-class.html" target="_blank" rel="noopener">css-class.html</a></p>
 </blockquote>
-</li>
-<li><code>ES6</code>的新语法知道多少<blockquote>
+<ol start="12">
+<li><code>ES6</code>的新语法知道多少</li>
+</ol>
+<blockquote>
 <p>知道箭头函数，一种匿名函数，直接用参数指向返回值，不用<code>this</code>绑定，其<code>this</code>指向外层函数，还知道<code>symbol</code>就是给一个特定标签，还知道柯里化，就是函数的参数与返回值是函数，这样多层嵌套可形成高阶函数</p>
 </blockquote>
-</li>
-<li><code>promise了</code>解过吗<blockquote>
+<ol start="13">
+<li><code>promise了</code>解过吗</li>
+</ol>
+<blockquote>
 <p>没有</p>
 </blockquote>
-</li>
-<li>跨域说一下<blockquote>
+<ol start="14">
+<li>跨域说一下</li>
+</ol>
+<blockquote>
 <p>不同协议域名端口号都是不同的域，从一个域去访问不同域的数据都会造成跨域，解决办法就是后端开启权限，<code>access-control-allow</code>设置<code>*</code></p>
 </blockquote>
-</li>
-<li><code>access-control-allow</code>设置为<code>*</code>之后，在<code>http</code>层有什么影响<blockquote>
+<ol start="15">
+<li><code>access-control-allow</code>设置为<code>*</code>之后，在<code>http</code>层有什么影响</li>
+</ol>
+<blockquote>
 <p>不知道</p>
 </blockquote>
-</li>
-<li>为什么学前端<blockquote>
+<ol start="16">
+<li>为什么学前端</li>
+</ol>
+<blockquote>
 <p>有意思，兴趣与找工作需求</p>
 </blockquote>
-</li>
+<ol start="17">
 <li>对我的建议：多了解工程中用到的语法，尽量把了解到的新语法用到实际项目中，少用<code>jquery</code>，作为了解就行，多学<code>vue</code>, <code>react</code>,<code>webpack</code>之类，总体评价就是了解的知识挺多</li>
 </ol>
 
