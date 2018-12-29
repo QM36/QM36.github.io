@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="目的  在本地起一个服务进程，在浏览器中输入localhost:8080即可访问tomcat欢迎页,如下图所示    再能够把自己的项目部署上去，在浏览器中输入localhost:8080/urprojectname即可访问自己的页面  准备   jdk  安装方法：在官网选择合适的版本下载，在下载之前需要Accept License Agreement ，之后根据提示安装即可 验证方法：在终端输">
+    <meta name="description" content="目的 在本地起一个服务进程，在浏览器中输入localhost:8080即可访问tomcat欢迎页,如下图所示    再能够把自己的项目部署上去，在浏览器中输入localhost:8080/urprojectname即可访问自己的页面  准备 jdk  安装方法：在官网选择合适的版本下载，在下载之前需要Accept License Agreement ，之后根据提示安装即可 验证方法：在终端输入ja">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在Mac上搭建自己的服务器——tomcat">
 <meta property="og:url" content="https://qm36.github.io/2018/09/30/在Mac上搭建自己的服务器——tomcat/index.html">
 <meta property="og:site_name" content="QM36&#39;S BLOG">
-<meta property="og:description" content="目的  在本地起一个服务进程，在浏览器中输入localhost:8080即可访问tomcat欢迎页,如下图所示    再能够把自己的项目部署上去，在浏览器中输入localhost:8080/urprojectname即可访问自己的页面  准备   jdk  安装方法：在官网选择合适的版本下载，在下载之前需要Accept License Agreement ，之后根据提示安装即可 验证方法：在终端输">
+<meta property="og:description" content="目的 在本地起一个服务进程，在浏览器中输入localhost:8080即可访问tomcat欢迎页,如下图所示    再能够把自己的项目部署上去，在浏览器中输入localhost:8080/urprojectname即可访问自己的页面  准备 jdk  安装方法：在官网选择合适的版本下载，在下载之前需要Accept License Agreement ，之后根据提示安装即可 验证方法：在终端输入ja">
 <meta property="og:image" content="http://p4k6er8dp.bkt.clouddn.com/18-9-25/1164953.jpg">
 <meta property="og:image" content="http://p4k6er8dp.bkt.clouddn.com/18-9-25/50018498.jpg">
 <meta property="og:image" content="http://p4k6er8dp.bkt.clouddn.com/18-9-25/33621618.jpg">
@@ -19,7 +19,7 @@
 <meta property="og:updated_time" content="2018-10-08T06:53:50.347Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在Mac上搭建自己的服务器——tomcat">
-<meta name="twitter:description" content="目的  在本地起一个服务进程，在浏览器中输入localhost:8080即可访问tomcat欢迎页,如下图所示    再能够把自己的项目部署上去，在浏览器中输入localhost:8080/urprojectname即可访问自己的页面  准备   jdk  安装方法：在官网选择合适的版本下载，在下载之前需要Accept License Agreement ，之后根据提示安装即可 验证方法：在终端输">
+<meta name="twitter:description" content="目的 在本地起一个服务进程，在浏览器中输入localhost:8080即可访问tomcat欢迎页,如下图所示    再能够把自己的项目部署上去，在浏览器中输入localhost:8080/urprojectname即可访问自己的页面  准备 jdk  安装方法：在官网选择合适的版本下载，在下载之前需要Accept License Agreement ，之后根据提示安装即可 验证方法：在终端输入ja">
 <meta name="twitter:image" content="http://p4k6er8dp.bkt.clouddn.com/18-9-25/1164953.jpg">
     
     
@@ -72,10 +72,10 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/2018/09/30/大二上C++期末复习/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        <li><a class="icon" href="/2018/09/30/在Mac上搭建自己的服务器——Nginx/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
         
         
-        <li><a class="icon" href="/2018/09/30/在Mac上搭建自己的服务器——Nginx/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        <li><a class="icon" href="/2018/09/30/前端学习第二周/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
         <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
@@ -102,7 +102,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">&#x76EE;&#x7684;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">&#x51C6;&#x5907;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目的"><span class="toc-number">1.</span> <span class="toc-text"><a href="#&#x76EE;&#x7684;" class="headerlink" title="&#x76EE;&#x7684;"></a>&#x76EE;&#x7684;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-number">2.</span> <span class="toc-text"><a href="#&#x51C6;&#x5907;" class="headerlink" title="&#x51C6;&#x5907;"></a>&#x51C6;&#x5907;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署过程"><span class="toc-number">3.</span> <span class="toc-text"><a href="#&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;" class="headerlink" title="&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;"></a>&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -136,56 +136,44 @@
   
 
   <div class="content" itemprop="articleBody">
-    <h2>目的</h2>
-<ol>
+    <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><ol>
 <li>在本地起一个服务进程，在浏览器中输入<code>localhost:8080</code>即可访问<code>tomcat</code>欢迎页,如下图所示</li>
 </ol>
 <p><img src="http://p4k6er8dp.bkt.clouddn.com/18-9-25/1164953.jpg" alt=""></p>
-<ol start="2">
+<ol>
 <li>再能够把自己的项目部署上去，在浏览器中输入<code>localhost:8080/urprojectname</code>即可访问自己的页面</li>
 </ol>
-<h2>准备</h2>
-<ol>
-<li>
-<p>jdk</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ol>
+<li><p>jdk</p>
 <ul>
 <li>安装方法：在<a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">官网</a>选择合适的版本下载，在下载之前需要<code>Accept License Agreement</code> ，之后根据提示安装即可</li>
-<li>验证方法：在终端输入<code>java</code>，若出现下图提示，则安装成功</li>
-</ul>
+<li><p>验证方法：在终端输入<code>java</code>，若出现下图提示，则安装成功</p>
 <p><img src="http://p4k6er8dp.bkt.clouddn.com/18-9-25/50018498.jpg" alt=""></p>
-<ul>
+</li>
 <li>详细步骤：<a href="https://jingyan.baidu.com/article/7f766daffd99354101e1d095.html" target="_blank" rel="noopener">百度经验</a></li>
 </ul>
 </li>
-<li>
-<p>tomcat
-安装方法：在<a href="http://tomcat.apache.org" target="_blank" rel="noopener">官网</a>上下载解压并安装，为了方便管理，可以将解压之后的文件重命名为<code>ApacheTomcat</code>放进<code>/Users/mymacname/Library</code>，以下统一使用<code>ApacheTomcat</code></p>
-</li>
+<li>tomcat<br> 安装方法：在<a href="http://tomcat.apache.org" target="_blank" rel="noopener">官网</a>上下载解压并安装，为了方便管理，可以将解压之后的文件重命名为<code>ApacheTomcat</code>放进<code>/Users/mymacname/Library</code>，以下统一使用<code>ApacheTomcat</code></li>
 </ol>
-<h2>部署过程</h2>
-<ol>
-<li>
-<p>安装好<code>tomcat</code>之后，首先启动<code>tomcat</code>，需要进入<code>ApacheTomcat</code>的<code>bin</code>中，会发现如下文件</p>
-<p><img src="http://p4k6er8dp.bkt.clouddn.com/18-9-25/33621618.jpg" alt=""></p>
+<h2 id="部署过程"><a href="#部署过程" class="headerlink" title="部署过程"></a>部署过程</h2><ol>
+<li><p>安装好<code>tomcat</code>之后，首先启动<code>tomcat</code>，需要进入<code>ApacheTomcat</code>的<code>bin</code>中，会发现如下文件</p>
+<p> <img src="http://p4k6er8dp.bkt.clouddn.com/18-9-25/33621618.jpg" alt=""></p>
 <blockquote>
 <p>注意<code>startup.sh</code>与<code>shutdown.sh</code>为控制<code>tomcat</code>开启与关闭的脚本</p>
 </blockquote>
 </li>
 </ol>
-<p>启动<code>tomcat</code>需要<code>/bin</code>的路径下输入以下命令,若出现<code>Tomcat started</code>。则成功启动
-	<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh startup.sh</span><br></pre></td></tr></table></figure></p>
-<ol start="2">
+<p>启动<code>tomcat</code>需要<code>/bin</code>的路径下输入以下命令,若出现<code>Tomcat started</code>。则成功启动<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh startup.sh</span><br></pre></td></tr></table></figure></p>
+<ol>
 <li>这个时候就可以进浏览器打开<code>localhost:8080</code>去访问<code>tomcat</code>欢迎页</li>
 <li>关键步骤：如何把自己写的项目部署上去，不管是打包之后的项目还是简单的<code>html</code>页面，都可以用此方法。将自己的项目方在一个文件夹中，我自己的项目文件为<code>mood</code>，下文会涉及到这个文件名，放进<code>/ApacheTomcat/webapps</code>中，即可</li>
-<li>这个时候需要先关闭<code>tomcat</code>，再重启
+<li><p>这个时候需要先关闭<code>tomcat</code>，再重启</p>
 <ul>
-<li>
-<p>关闭命令
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh startup.sh</span><br></pre></td></tr></table></figure></p>
+<li><p>关闭命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh startup.sh</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>打开命令
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh shutdown.sh</span><br></pre></td></tr></table></figure></p>
+<li><p>打开命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh shutdown.sh</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -193,7 +181,7 @@
 <blockquote>
 <p>注意以上命令都需要在<code>/bin</code>的路径，即<code>startup.sh</code>与<code>shutdown.sh</code>存在的文件夹中使用</p>
 </blockquote>
-<ol start="5">
+<ol>
 <li>在浏览器中输入<code>localhost:8080/mood</code>，就可以访问你的项目页面了，最终展示如下</li>
 </ol>
 <p><img src="http://p4k6er8dp.bkt.clouddn.com/18-9-25/80936594.jpg" alt=""></p>
@@ -226,7 +214,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">&#x76EE;&#x7684;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">&#x51C6;&#x5907;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目的"><span class="toc-number">1.</span> <span class="toc-text"><a href="#&#x76EE;&#x7684;" class="headerlink" title="&#x76EE;&#x7684;"></a>&#x76EE;&#x7684;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-number">2.</span> <span class="toc-text"><a href="#&#x51C6;&#x5907;" class="headerlink" title="&#x51C6;&#x5907;"></a>&#x51C6;&#x5907;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署过程"><span class="toc-number">3.</span> <span class="toc-text"><a href="#&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;" class="headerlink" title="&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;"></a>&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">

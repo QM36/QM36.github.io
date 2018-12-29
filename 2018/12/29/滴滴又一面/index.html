@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="title:滴滴又一面  cookie(以及和storage,session的区别) AJAX工作原理 同步异步 JS如何实现异步 get和post 跨域的解决 XSS event loop vue学习 npm webpack">
+    <meta name="description" content="cookie(以及和storage,session的区别) AJAX工作原理 同步异步 JS如何实现异步 get和post 跨域的解决 XSS event loop vue学习 npm webpack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="QM36&#39;S BLOG">
+<meta property="og:title" content="滴滴又一面(2018.12.29)">
 <meta property="og:url" content="https://qm36.github.io/2018/12/29/滴滴又一面/index.html">
 <meta property="og:site_name" content="QM36&#39;S BLOG">
-<meta property="og:description" content="title:滴滴又一面  cookie(以及和storage,session的区别) AJAX工作原理 同步异步 JS如何实现异步 get和post 跨域的解决 XSS event loop vue学习 npm webpack">
-<meta property="og:updated_time" content="2018-12-29T14:16:30.418Z">
+<meta property="og:description" content="cookie(以及和storage,session的区别) AJAX工作原理 同步异步 JS如何实现异步 get和post 跨域的解决 XSS event loop vue学习 npm webpack">
+<meta property="og:updated_time" content="2018-12-29T14:18:11.407Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="QM36&#39;S BLOG">
-<meta name="twitter:description" content="title:滴滴又一面  cookie(以及和storage,session的区别) AJAX工作原理 同步异步 JS如何实现异步 get和post 跨域的解决 XSS event loop vue学习 npm webpack">
+<meta name="twitter:title" content="滴滴又一面(2018.12.29)">
+<meta name="twitter:description" content="cookie(以及和storage,session的区别) AJAX工作原理 同步异步 JS如何实现异步 get和post 跨域的解决 XSS event loop vue学习 npm webpack">
     
     
         
@@ -35,7 +35,7 @@
         
     
     <!-- title -->
-    <title>QM36&#39;S BLOG</title>
+    <title>滴滴又一面(2018.12.29)</title>
     <!-- styles -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- rss -->
@@ -82,20 +82,20 @@
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://qm36.github.io/2018/12/29/滴滴又一面/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://qm36.github.io/2018/12/29/滴滴又一面/&text="><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title="><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://qm36.github.io/2018/12/29/滴滴又一面/&is_video=false&description="><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=&body=Check out this article: https://qm36.github.io/2018/12/29/滴滴又一面/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title="><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title="><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title="><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title="><i class="fa fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://qm36.github.io/2018/12/29/滴滴又一面/&name=&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://qm36.github.io/2018/12/29/滴滴又一面/&text=滴滴又一面(2018.12.29)"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title=滴滴又一面(2018.12.29)"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://qm36.github.io/2018/12/29/滴滴又一面/&is_video=false&description=滴滴又一面(2018.12.29)"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=滴滴又一面(2018.12.29)&body=Check out this article: https://qm36.github.io/2018/12/29/滴滴又一面/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title=滴滴又一面(2018.12.29)"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title=滴滴又一面(2018.12.29)"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title=滴滴又一面(2018.12.29)"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title=滴滴又一面(2018.12.29)"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://qm36.github.io/2018/12/29/滴滴又一面/&name=滴滴又一面(2018.12.29)&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">title:&#x6EF4;&#x6EF4;&#x53C8;&#x4E00;&#x9762;</span></a></li></ol>
+      
     </div>
   </span>
 </div>
@@ -107,7 +107,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        
+        滴滴又一面(2018.12.29)
     </h1>
 
 
@@ -129,9 +129,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <hr>
-<h2>title:滴滴又一面</h2>
-<ol>
+    <ol>
 <li>cookie(以及和storage,session的区别)</li>
 <li>AJAX工作原理</li>
 <li>同步异步</li>
@@ -170,21 +168,21 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">title:&#x6EF4;&#x6EF4;&#x53C8;&#x4E00;&#x9762;</span></a></li></ol>
+      
     </div>
 
     <div id="share-footer" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://qm36.github.io/2018/12/29/滴滴又一面/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://qm36.github.io/2018/12/29/滴滴又一面/&text="><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title="><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://qm36.github.io/2018/12/29/滴滴又一面/&is_video=false&description="><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=&body=Check out this article: https://qm36.github.io/2018/12/29/滴滴又一面/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title="><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title="><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title="><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title="><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://qm36.github.io/2018/12/29/滴滴又一面/&name=&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://qm36.github.io/2018/12/29/滴滴又一面/&text=滴滴又一面(2018.12.29)"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title=滴滴又一面(2018.12.29)"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://qm36.github.io/2018/12/29/滴滴又一面/&is_video=false&description=滴滴又一面(2018.12.29)"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=滴滴又一面(2018.12.29)&body=Check out this article: https://qm36.github.io/2018/12/29/滴滴又一面/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title=滴滴又一面(2018.12.29)"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title=滴滴又一面(2018.12.29)"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title=滴滴又一面(2018.12.29)"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://qm36.github.io/2018/12/29/滴滴又一面/&title=滴滴又一面(2018.12.29)"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://qm36.github.io/2018/12/29/滴滴又一面/&name=滴滴又一面(2018.12.29)&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
