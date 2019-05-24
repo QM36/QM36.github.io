@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="作用域链是什么  当代码在一个环境中执行时，会创建变量对象的一个作用域链(scope chain)。作用域链的用途，是保证对执行环境有权访问的所有变量和函数的有序访问。作用域链的前端，始终都是当前执行的代码所在环境的变量对象。如果这个环境是函数，则将其活动对象(activation object)作为变量对象。活动对象在最开始时只包含一个变量，即 arguments对象(这个对象在全局环境中是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="腾讯一面面经(2019-4-15)">
+<meta property="og:url" content="https://qm36.github.io/2019/05/24/腾讯一面面经/index.html">
+<meta property="og:site_name" content="QM36&#39;S BLOG">
+<meta property="og:description" content="作用域链是什么  当代码在一个环境中执行时，会创建变量对象的一个作用域链(scope chain)。作用域链的用途，是保证对执行环境有权访问的所有变量和函数的有序访问。作用域链的前端，始终都是当前执行的代码所在环境的变量对象。如果这个环境是函数，则将其活动对象(activation object)作为变量对象。活动对象在最开始时只包含一个变量，即 arguments对象(这个对象在全局环境中是">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006XqmrNly1g1xuyvf186j31em0yy0zr.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006XqmrNly1g1weyftlnnj31aa0feabh.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006XqmrNly1g23nf7h1r4j30pq0jq0tt.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006XqmrNly1g23ng1nb7ej30rc0eogmi.jpg">
+<meta property="og:updated_time" content="2019-05-24T08:05:52.725Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="腾讯一面面经(2019-4-15)">
+<meta name="twitter:description" content="作用域链是什么  当代码在一个环境中执行时，会创建变量对象的一个作用域链(scope chain)。作用域链的用途，是保证对执行环境有权访问的所有变量和函数的有序访问。作用域链的前端，始终都是当前执行的代码所在环境的变量对象。如果这个环境是函数，则将其活动对象(activation object)作为变量对象。活动对象在最开始时只包含一个变量，即 arguments对象(这个对象在全局环境中是">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006XqmrNly1g1xuyvf186j31em0yy0zr.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>腾讯一面面经(2019-4-15)</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/QM36">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2019/05/24/防抖与节流/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2019/04/02/Redux初学/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://qm36.github.io/2019/05/24/腾讯一面面经/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://qm36.github.io/2019/05/24/腾讯一面面经/&text=腾讯一面面经(2019-4-15)"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://qm36.github.io/2019/05/24/腾讯一面面经/&title=腾讯一面面经(2019-4-15)"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://qm36.github.io/2019/05/24/腾讯一面面经/&is_video=false&description=腾讯一面面经(2019-4-15)"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=腾讯一面面经(2019-4-15)&body=Check out this article: https://qm36.github.io/2019/05/24/腾讯一面面经/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://qm36.github.io/2019/05/24/腾讯一面面经/&title=腾讯一面面经(2019-4-15)"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://qm36.github.io/2019/05/24/腾讯一面面经/&title=腾讯一面面经(2019-4-15)"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://qm36.github.io/2019/05/24/腾讯一面面经/&title=腾讯一面面经(2019-4-15)"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://qm36.github.io/2019/05/24/腾讯一面面经/&title=腾讯一面面经(2019-4-15)"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://qm36.github.io/2019/05/24/腾讯一面面经/&name=腾讯一面面经(2019-4-15)&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">&#x9762;&#x8BD5;&#x603B;&#x7ED3;</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        腾讯一面面经(2019-4-15)
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">QM36'S BLOG</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2019-05-24T08:05:04.314Z" itemprop="datePublished">2019-05-24</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <ol>
+<li>
+<p>作用域链是什么</p>
+<blockquote>
+<p>当代码在一个环境中执行时，会创建变量对象的一个作用域链(scope chain)。作用域链的用途，是保证对执行环境有权访问的所有变量和函数的有序访问。作用域链的前端，始终都是当前执行的代码所在环境的变量对象。如果这个环境是函数，则将其活动对象(activation object)作为变量对象。活动对象在最开始时只包含一个变量，即 arguments对象(这个对象在全局环境中是不存在的)。作用域链中的下一个变量对象来自包含(外部)环境，而再下一个变量对象则来自下一个包含环境。这样，一直延 续到全局执行环境;全局执行环境的变量对象始终都是作用域链中的最后一个对象</p>
+</blockquote>
+<p>除了函数作用域在Js里面还有什么作用域？</p>
+<blockquote>
+<p>块级作用域</p>
+</blockquote>
+<p>什么时候可以形成块级作用域</p>
+<blockquote>
+<p>let,const</p>
+</blockquote>
+</li>
+<li>
+<p>状态提升是什么</p>
+<blockquote>
+<p>在一个函数的内部无论在什么地方声明一个变量，都可以在使用这个函数的时候识别这个变量</p>
+</blockquote>
+<p>以下输出什么
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(a);</span><br><span class="line">var a = 1;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>undefined （当时回答错了说成了1）</p>
+</blockquote>
+<p>函数提升和变量提升哪个优先级高</p>
+<blockquote>
+<p>函数提升（当时说错了）具体见<a href="https://www.jianshu.com/p/b234a390c6bd" target="_blank" rel="noopener">博客</a></p>
+</blockquote>
+</li>
+<li>
+<p>dns的整个过程</p>
+<blockquote>
+<p>host查询 =》 浏览器缓存查询 =》 dns解析（递归查询和迭代查询）具体见下图</p>
+</blockquote>
+<p><img src="http://ww1.sinaimg.cn/large/006XqmrNly1g1xuyvf186j31em0yy0zr.jpg" alt=""></p>
+<p>如果在域名查询中任何一级都没有查到会发生什么？</p>
+</li>
+<li>
+<p>ajax的整个请求过程</p>
+<blockquote>
+<p>（new XMLHttpRequest =&gt; onreadyStateChange监听变化，当时少说了一个）创建对象，发送请求，响应请求</p>
+</blockquote>
+<p>readState的状态码除了4还有什么，描述的是什么</p>
+<blockquote>
+<p>（描述的是请求的状态,具体忘了）具体见下图</p>
+</blockquote>
+<p><img src="http://ww1.sinaimg.cn/large/006XqmrNly1g1weyftlnnj31aa0feabh.jpg" alt=""></p>
+<p>再说一下你知道的http状态码</p>
+<blockquote>
+<p>2xx 3xx 4xx 5xx</p>
+</blockquote>
+<p>什么情况下会遇到304</p>
+<blockquote>
+<p>不知道</p>
+</blockquote>
+</li>
+<li>
+<p>js的单线程与eventloop</p>
+<blockquote>
+<p>js单线程，浏览器多线程，浏览器内部提供了许多线程：js引擎线程，UI渲染线程，事件触发线程等。对于同步的操作都是放在了主线程里面，这是一个队列，先进先出，然后异步的操作有定时器，之后放在任务队列里面，主线程的操作结束之后根据任务队列的优先级操作(当时没有说到异步的触发是回调函数)</p>
+</blockquote>
+<p>优先级是什么样的</p>
+<blockquote>
+<p>忘了（应该是宏任务和微任务）</p>
+</blockquote>
+</li>
+</ol>
+<ol start="6">
+<li>
+<p>缓存：serviceWorker有了解吗</p>
+<blockquote>
+<p>完全没有了解，只提到create-react-app里面自动生成，，，</p>
+</blockquote>
+</li>
+<li>
+<p>同源机制是什么？什么是跨域，请求什么资源会跨域，跨域会引起什么后果，如何解决跨域，cross头部有哪些字段？</p>
+<blockquote>
+<p>浏览器为了安全起见的机制，同协议，同域名同子域名，同端口称为同源。</p>
+</blockquote>
+<p>跨域的后果</p>
+<blockquote>
+<p>访问不到资源</p>
+</blockquote>
+<p>什么资源</p>
+<blockquote>
+<p>ajax请求，xml， img</p>
+</blockquote>
+<p>如何解决</p>
+<blockquote>
+<p>access-control-allow-origin，jsonp，代理</p>
+</blockquote>
+<p>jsonp的解决方式需要后端做什么</p>
+<blockquote>
+<p>不知道</p>
+</blockquote>
+<p>cross头部有什么字段？</p>
+<blockquote>
+<p>不知道</p>
+</blockquote>
+<p>跨域的话能访问cookie吗？</p>
+<blockquote>
+<p>不能</p>
+</blockquote>
+<p>不同的标签页的localstorage能跨域访问吗？</p>
+<blockquote>
+<p>不能</p>
+</blockquote>
+<p>怎么操作才能让一个根域下面的子域之间不会跨域</p>
+<blockquote>
+<p>document.domain('') 当场被反驳</p>
+</blockquote>
+</li>
+<li>
+<p>cdn有什么好处</p>
+<blockquote>
+<p>不知道</p>
+</blockquote>
+</li>
+<li>
+<p>你还有什么问题：</p>
+<blockquote>
+<p>问了两个一个是做什么业务，什么技术栈。一个是看重实习生的基础还是经验，很疑惑没有问到很基础的红宝书的问题</p>
+</blockquote>
+</li>
+<li>
+<p>最开始做了自我介绍</p>
+<blockquote>
+<p>大三，前端一年，react</p>
+</blockquote>
+</li>
+</ol>
+<h4>面试总结</h4>
+<ol>
+<li>
+<p>关于状态提升：</p>
+<ul>
+<li>
+<p>首先需要说明变量的声明，使用<code>var</code>声明的变量会自动添加到最接近的环境变量中，在函数内部，最接近的环境就是函数的局部环境。如果省略了关键词<code>var</code>，这个变量依然存在，因为在寻找这个变量的过程中，直到找到顶层作用域链都没有找到就会在顶层声明这个变量，于是就会变成全局变量</p>
+</li>
+<li>
+<p>再谈查询标识符：当某个环境中为了读取或写入而引入一个标识符时，必须通过搜索来确定该标识符实际代表什么，搜索过程从作用域链的前端开始，向上逐级查询与给定名字匹配的标识符，如果在某个局部环境中找到了这个标识符，搜索就会停止，如果在全局环境中也没有找到标识符，则意味着该变量未声明</p>
+</li>
+<li>
+<p>现在说变量提升：代码中声明变量的所在行并不是真正的所在行，javascript编译时会统一将声明提升到作用域的最上方。这里需要注意的一点是，编译器会将变量声明提升到代码顶部，但赋值仍然在原来的地方，所以以下示例的输出就显而易见了</p>
+</li>
+</ul>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">//undefined</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">3</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(a); <span class="comment">//3</span></span><br><span class="line">  a = <span class="number">4</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(a); <span class="comment">//4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>同名的局部变量或参数优先级会高于同名局部变量：这是由于作用域链的搜索过程是先局部再全局</li>
+</ul>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">3</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(a); <span class="comment">//undefined</span></span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">4</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(a); <span class="comment">//4</span></span><br><span class="line">&#125;</span><br><span class="line">test();</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>函数声明：函数声明不同的是不但声明会提升在作用域顶端，就连函数的内容也会提升。注意：函数声明分为函数声明（函数式声明）和函数表达式（变量式声明），只有前者才会有函数提升</li>
+</ul>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  test1();</span><br><span class="line">  <span class="keyword">var</span> b = <span class="number">5</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">test1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(b); <span class="comment">//undefined</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">            </span><br><span class="line">test();</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数声明 执行函数提升</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数表达式 不执行函数提升 但可以看成是变量提升</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>关于优先级：函数提升优先级高于变量提升，且不会被变量声明覆盖，但是会被变量赋值覆盖。</li>
+</ul>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">2</span>); <span class="comment">//2</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// function a()</span></span><br><span class="line">a();</span><br><span class="line">a = <span class="number">3</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
+</li>
+</ol>
+<ol start="2">
+<li>
+<p>关于http状态码304</p>
+<ul>
+<li>304是什么：资源为修改。客户端中所请求资源的缓存仍然是有效的,也就是说该资源从上次缓存到现在并没有被修改过.条件请求可以在确保客户端的资源是最新的同时避免因每次都请求完整资源给服务器带来的性能问题</li>
+<li>辨别条件请求：当客户端缓存了目标资源但不确定该缓存资源是否是最新版本的时候,就会发送一个条件请求。在<code>Headers Inspector</code>查找相关请求头,这样就可以辨别出一个请求是否是条件请求在进行条件请求时,客户端会提供给服务器一个<code>If-Modified-Since</code>请求头,其值为服务器上次返回的<code>Last-Modified</code>响应头中的日期值,还会提供一个<code>If-None-Match</code>请求头,值为服务器上次返回的<code>ETag</code>响应头的值。服务端会根据客户端的这两个字段判断客户端缓存的资源是否是最新的，如果是最新的，就会返回<code>304</code>，如果不是最新的就会返回<code>200</code>并且返回响应体就是该资源当前最新的。只有客户端发送的请求中有以上两个字段才会去判断即发送条件请求，否则就会无条件请求改资源，服务器也会返回完整资源</li>
+<li>为什么使用条件请求：访问网页加速。但是仍然需要发送条件请求，只有当收到<code>304</code>的时候才会显示出缓存的资源。</li>
+<li>避免条件请求：清除浏览器缓存，删除所有请求中的条件请求相关的请求头以及所有响应中的缓存时间相关的响应头，在每个请求中添加<code>Pragma: no-cache</code>请求头来阻止浏览器缓存资源</li>
+</ul>
+</li>
+<li>
+<p>eventloop中的优先级</p>
+<ul>
+<li>
+<p>首先知道宏任务与微任务的优先级：多个宏任务组成的队列就是一个任务队列，任务队列中都是进行完的异步操作的回调。在宏任务进行的过程中可能又会产生微任务，任务队列中执行的优先级就是宏任务的依次进入顺序，另外当前宏任务附带的微任务没有进行完是不会进行下一个宏任务的。参照如下示例</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="params">_</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="number">4</span>))</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">  resolve()</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">1</span>)</span><br><span class="line">&#125;).then(<span class="function"><span class="params">_</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">3</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">2</span>)</span><br><span class="line"><span class="string">`</span></span><br></pre></td></tr></table></figure></p>
+<p>以上输出的顺序是<code>1234</code>，<code>setTimeout</code>是作为宏任务的，而<code>Promise.then</code>是典型的微任务。所有进入任务队列的都是异步操作的回调函数，也就是说<code>new Promise</code>在实例化的过程中都是同步操作，在<code>then</code>中被注册的回调才是异步执行的。由于<code>eventloop</code>是首先进行同步操作，之后才会去检查任务队列中的回调，也就是同步阶段输出<code>1,2</code>之后就会去任务队列检查微任务这个时候输出<code>3</code>，最后再输出<code>4</code></p>
+</li>
+<li>
+<p>什么是宏任务和微任务：
+<img src="http://ww1.sinaimg.cn/large/006XqmrNly1g23nf7h1r4j30pq0jq0tt.jpg" alt="">
+<img src="http://ww1.sinaimg.cn/large/006XqmrNly1g23ng1nb7ej30rc0eogmi.jpg" alt=""></p>
+</li>
+</ul>
+</li>
+<li>
+<p>serviceWorker</p>
+</li>
+</ol>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/QM36">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">&#x9762;&#x8BD5;&#x603B;&#x7ED3;</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://qm36.github.io/2019/05/24/腾讯一面面经/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://qm36.github.io/2019/05/24/腾讯一面面经/&text=腾讯一面面经(2019-4-15)"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://qm36.github.io/2019/05/24/腾讯一面面经/&title=腾讯一面面经(2019-4-15)"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://qm36.github.io/2019/05/24/腾讯一面面经/&is_video=false&description=腾讯一面面经(2019-4-15)"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=腾讯一面面经(2019-4-15)&body=Check out this article: https://qm36.github.io/2019/05/24/腾讯一面面经/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://qm36.github.io/2019/05/24/腾讯一面面经/&title=腾讯一面面经(2019-4-15)"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://qm36.github.io/2019/05/24/腾讯一面面经/&title=腾讯一面面经(2019-4-15)"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://qm36.github.io/2019/05/24/腾讯一面面经/&title=腾讯一面面经(2019-4-15)"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://qm36.github.io/2019/05/24/腾讯一面面经/&title=腾讯一面面经(2019-4-15)"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://qm36.github.io/2019/05/24/腾讯一面面经/&name=腾讯一面面经(2019-4-15)&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 qumeng
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/QM36">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+

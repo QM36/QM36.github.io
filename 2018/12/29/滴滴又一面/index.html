@@ -6,19 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="cookie(以及和storage,session的区别)参考博客理解Cookie和Session机制  cookie 什么是cookie   cookie是一些数据，存储和在电脑上的文本文件中，当web服务器向浏览器发送web页面时，在连接关闭后，服务端就不会记录用户的信息。cookie就是解决“记录客户端的用户信息”：当用户访问web页面时，他的名字可以记录在cookie中，当用户下一次访问">
+    <meta name="description" content="cookie(以及和storage,session的区别) 参考博客理解Cookie和Session机制  cookie   什么是cookie cookie是一些数据，存储和在电脑上的文本文件中，当web服务器向浏览器发送web页面时，在连接关闭后，服务端就不会记录用户的信息。cookie就是解决“记录客户端的用户信息”：当用户访问web页面时，他的名字可以记录在cookie中，当用户下一次访">
 <meta property="og:type" content="article">
 <meta property="og:title" content="滴滴又一面(2018.12.29)">
 <meta property="og:url" content="https://qm36.github.io/2018/12/29/滴滴又一面/index.html">
 <meta property="og:site_name" content="QM36&#39;S BLOG">
-<meta property="og:description" content="cookie(以及和storage,session的区别)参考博客理解Cookie和Session机制  cookie 什么是cookie   cookie是一些数据，存储和在电脑上的文本文件中，当web服务器向浏览器发送web页面时，在连接关闭后，服务端就不会记录用户的信息。cookie就是解决“记录客户端的用户信息”：当用户访问web页面时，他的名字可以记录在cookie中，当用户下一次访问">
+<meta property="og:description" content="cookie(以及和storage,session的区别) 参考博客理解Cookie和Session机制  cookie   什么是cookie cookie是一些数据，存储和在电脑上的文本文件中，当web服务器向浏览器发送web页面时，在连接关闭后，服务端就不会记录用户的信息。cookie就是解决“记录客户端的用户信息”：当用户访问web页面时，他的名字可以记录在cookie中，当用户下一次访">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006XqmrNly1fyou2dveshj30m00awdgn.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006XqmrNly1fyp1rrczm1j311k08qjsr.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006XqmrNly1fyskpgil6rj319q0mwguu.jpg">
 <meta property="og:updated_time" content="2019-01-03T03:13:40.454Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="滴滴又一面(2018.12.29)">
-<meta name="twitter:description" content="cookie(以及和storage,session的区别)参考博客理解Cookie和Session机制  cookie 什么是cookie   cookie是一些数据，存储和在电脑上的文本文件中，当web服务器向浏览器发送web页面时，在连接关闭后，服务端就不会记录用户的信息。cookie就是解决“记录客户端的用户信息”：当用户访问web页面时，他的名字可以记录在cookie中，当用户下一次访问">
+<meta name="twitter:description" content="cookie(以及和storage,session的区别) 参考博客理解Cookie和Session机制  cookie   什么是cookie cookie是一些数据，存储和在电脑上的文本文件中，当web服务器向浏览器发送web页面时，在连接关闭后，服务端就不会记录用户的信息。cookie就是解决“记录客户端的用户信息”：当用户访问web页面时，他的名字可以记录在cookie中，当用户下一次访">
 <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006XqmrNly1fyou2dveshj30m00awdgn.jpg">
     
     
@@ -101,7 +101,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#cookie"><span class="toc-number">1.</span> <span class="toc-text"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#session"><span class="toc-number">2.</span> <span class="toc-text"><a href="#session" class="headerlink" title="session"></a>session</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WebStorage"><span class="toc-number">3.</span> <span class="toc-text"><a href="#WebStorage" class="headerlink" title="WebStorage"></a>WebStorage</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题"><span class="toc-number"></span> <span class="toc-text"><a href="#&#x95EE;&#x9898;" class="headerlink" title="&#x95EE;&#x9898;"></a>&#x95EE;&#x9898;</span></a>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">cookie</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">session</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">WebStorage</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text">&#x95EE;&#x9898;</span></a>
     </div>
   </span>
 </div>
@@ -136,53 +136,66 @@
 
   <div class="content" itemprop="articleBody">
     <ol>
-<li>cookie(以及和storage,session的区别)<br>参考博客<a href="https://www.cnblogs.com/andy-zhou/p/5360107.html" target="_blank" rel="noopener">理解Cookie和Session机制</a></li>
+<li>cookie(以及和storage,session的区别)
+参考博客<a href="https://www.cnblogs.com/andy-zhou/p/5360107.html" target="_blank" rel="noopener">理解Cookie和Session机制</a></li>
 </ol>
-<h4 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h4><ul>
-<li><p>什么是cookie</p>
-<p>  cookie是一些数据，存储和在电脑上的文本文件中，当web服务器向浏览器发送web页面时，在连接关闭后，服务端就不会记录用户的信息。cookie就是解决“记录客户端的用户信息”：当用户访问web页面时，他的名字可以记录在cookie中，当用户下一次访问该页面时，可以在cookie中读取用户访问记录。cookie以名/值对形式存储，当浏览器从服务器上请求web页面时，属于该页面的cookie会被添加到该请求中。服务端通过这种方式来获取用户信息</p>
-</li>
-<li><p>使用JavaScript创建Cookie</p>
+<h4>cookie</h4>
 <ul>
-<li><p>创建cookie</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.cookie = <span class="string">"username=John Doe"</span>;</span><br></pre></td></tr></table></figure>
+<li>
+<p>什么是cookie</p>
+<p>cookie是一些数据，存储和在电脑上的文本文件中，当web服务器向浏览器发送web页面时，在连接关闭后，服务端就不会记录用户的信息。cookie就是解决“记录客户端的用户信息”：当用户访问web页面时，他的名字可以记录在cookie中，当用户下一次访问该页面时，可以在cookie中读取用户访问记录。cookie以名/值对形式存储，当浏览器从服务器上请求web页面时，属于该页面的cookie会被添加到该请求中。服务端通过这种方式来获取用户信息</p>
 </li>
-<li><p>为cookie添加一个过期时间。默认情况下，cookie在浏览器关闭时删除</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.cookie = <span class="string">"uesrname=John Doe; expires=Thu, 18 Dec 2043 12: 00: 00 GMT"</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用path参数告诉浏览器cookie的路径，默认情况下，cookie属于当前页面</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.cookie=<span class="string">"username=John Doe; expires=Thu, 18 Dec 2043 12: 00: 00 GMT; path=/"</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>
+<p>使用JavaScript创建Cookie</p>
+<ul>
+<li>创建cookie</li>
 </ul>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.cookie = <span class="string">"username=John Doe"</span>;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>为cookie添加一个过期时间。默认情况下，cookie在浏览器关闭时删除</li>
+</ul>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.cookie = <span class="string">"uesrname=John Doe; expires=Thu, 18 Dec 2043 12: 00: 00 GMT"</span>;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>使用path参数告诉浏览器cookie的路径，默认情况下，cookie属于当前页面</li>
+</ul>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.cookie=<span class="string">"username=John Doe; expires=Thu, 18 Dec 2043 12: 00: 00 GMT; path=/"</span></span><br></pre></td></tr></table></figure></p>
 </li>
-<li><p>使用JavaScript读取Cookie</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="built_in">document</span>.cookie;	<span class="comment">//以字符串的方式返回所有的cookie，类型格式:cookie1=value; cookie2=value; cookie3=value;</span></span><br></pre></td></tr></table></figure>
+<li>
+<p>使用JavaScript读取Cookie</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="built_in">document</span>.cookie;	<span class="comment">//以字符串的方式返回所有的cookie，类型格式:cookie1=value; cookie2=value; cookie3=value;</span></span><br></pre></td></tr></table></figure></p>
 </li>
-<li><p>使用JavaScript修改Cookie：同创建方式，旧的cookie将会被覆盖</p>
+<li>
+<p>使用JavaScript修改Cookie：同创建方式，旧的cookie将会被覆盖</p>
 </li>
-<li><p>使用JavaScript删除Cookie：只需要设置expires参数为以前的时间即可，不必指定cookie的值</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.cookie = <span class="string">"username=; expires=Thu, 01 Jan 1970 00:00:00 GMT"</span>;</span><br></pre></td></tr></table></figure>
+<li>
+<p>使用JavaScript删除Cookie：只需要设置expires参数为以前的时间即可，不必指定cookie的值</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.cookie = <span class="string">"username=; expires=Thu, 01 Jan 1970 00:00:00 GMT"</span>;</span><br></pre></td></tr></table></figure></p>
 </li>
-<li><p>JavaScript Cookie实例:首先，访问者访问web页面,他将被要求填写自己的名字。该名字会存储在cookie中。访问者下一次访问页面时，他会看到一个欢迎的消息。</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setCookie</span>(<span class="params">cname,cvalue,exdays</span>)</span>&#123;<span class="comment">//用于存储访问者名字的函数，参数分别是名、值和到期时间</span></span><br><span class="line">    <span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">    d.setTime(d.getTime()+(exdays*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">1000</span>));</span><br><span class="line">    <span class="keyword">var</span> expires = <span class="string">"expires="</span>+d.toGMTString();</span><br><span class="line">    <span class="built_in">document</span>.cookie = cname + <span class="string">"="</span> + cvalue + <span class="string">";"</span> + expires;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getCookie</span> (<span class="params">cname</span>) </span>&#123;<span class="comment">//返回后指定cookie的值</span></span><br><span class="line">    <span class="keyword">var</span> name = name + <span class="string">"="</span>;</span><br><span class="line">    <span class="keyword">var</span> ca = <span class="built_in">document</span>.cookie.split(<span class="string">';'</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; ca.length; i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> c = ca[i].trim();</span><br><span class="line">        <span class="keyword">if</span>(c.indexOf(name) == <span class="number">0</span>) </span><br><span class="line">        <span class="keyword">return</span> c.substring(name.length, c.length);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkCookie</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> username = getCookie(<span class="string">"username"</span>);</span><br><span class="line">    <span class="keyword">if</span>(username != <span class="string">""</span>) &#123;</span><br><span class="line">        alert(<span class="string">"Welcome again"</span> + username);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        username = prompt(<span class="string">"Please enter your name:"</span>, <span class="string">""</span>);</span><br><span class="line">        <span class="keyword">if</span> (username != <span class="string">""</span> &amp;&amp; username != <span class="literal">null</span>) &#123;</span><br><span class="line">            setCookie(<span class="string">"username"</span>, username, <span class="number">365</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<p>JavaScript Cookie实例:首先，访问者访问web页面,他将被要求填写自己的名字。该名字会存储在cookie中。访问者下一次访问页面时，他会看到一个欢迎的消息。</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setCookie</span>(<span class="params">cname,cvalue,exdays</span>)</span>&#123;<span class="comment">//用于存储访问者名字的函数，参数分别是名、值和到期时间</span></span><br><span class="line">    <span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">    d.setTime(d.getTime()+(exdays*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">1000</span>));</span><br><span class="line">    <span class="keyword">var</span> expires = <span class="string">"expires="</span>+d.toGMTString();</span><br><span class="line">    <span class="built_in">document</span>.cookie = cname + <span class="string">"="</span> + cvalue + <span class="string">";"</span> + expires;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getCookie</span> (<span class="params">cname</span>) </span>&#123;<span class="comment">//返回后指定cookie的值</span></span><br><span class="line">    <span class="keyword">var</span> name = name + <span class="string">"="</span>;</span><br><span class="line">    <span class="keyword">var</span> ca = <span class="built_in">document</span>.cookie.split(<span class="string">';'</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; ca.length; i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> c = ca[i].trim();</span><br><span class="line">        <span class="keyword">if</span>(c.indexOf(name) == <span class="number">0</span>) </span><br><span class="line">        <span class="keyword">return</span> c.substring(name.length, c.length);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkCookie</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> username = getCookie(<span class="string">"username"</span>);</span><br><span class="line">    <span class="keyword">if</span>(username != <span class="string">""</span>) &#123;</span><br><span class="line">        alert(<span class="string">"Welcome again"</span> + username);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        username = prompt(<span class="string">"Please enter your name:"</span>, <span class="string">""</span>);</span><br><span class="line">        <span class="keyword">if</span> (username != <span class="string">""</span> &amp;&amp; username != <span class="literal">null</span>) &#123;</span><br><span class="line">            setCookie(<span class="string">"username"</span>, username, <span class="number">365</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 </li>
-<li><p>cookie理解：</p>
+<li>
+<p>cookie理解：</p>
 <ul>
 <li>为什么需要cookie:web应用是使用http协议传输数据的，但是http协议是无状态的，一旦数据交换完毕，客户端与服务器的连接就会关闭，再次交换数据就需要建立新的连接，但是新的连接无法跟踪上次的会话。cookie可以当做http协议的一个扩展，它弥补了http的无状态。</li>
 <li>cookie的具体实现：有两个http头部是专门负责设置以及发送cookie的，他们分别是Set-Cookie和Cookie。具体过程如下：用户首次访问一个支持cookie的网站时候，用户会提供用户信息给服务器，接着服务器返回给客户端<code>http</code>响应信息时，如果其中包含<code>Set-Cookie</code>这个头部，意思就是指示客户端建立一个cookie，并且在后续请求中自动发送这个cookie到服务器端，直到这个cookie过期。</li>
 <li>cookie的期限与保存：如果cookie的生存期是整个会话时期，那么浏览器将保存cookie到服务器内存中，浏览器关闭时就会自动清除这个cookie。如果cookie的生存期是设置了时间限制，那么浏览器关闭也不会导致cookie的清除，下次打开浏览器访问对应网站，这个cookie就自动发送到服务器端，直到设置时期截止</li>
-<li><p>一个cookie的设置以及发送过程分一下步骤：</p>
+<li>一个cookie的设置以及发送过程分一下步骤：</li>
+</ul>
 <p><img src="https://ws1.sinaimg.cn/large/006XqmrNly1fyou2dveshj30m00awdgn.jpg" alt=""></p>
 </li>
-</ul>
-</li>
-<li>注意：<ul>
-<li>cookie不可跨域名：不同网站都会使用不同的cookie，他们之间不能通用，用户在访问A网站的时候不会携带上B网站的cookie，而且A网站也只能修改A网站也不能修改B网站颁发给用户的cookie。因为cookie是存放在客户端的，由浏览器管理，浏览器判断一个网站能否操作另一个网站的cookie的依据就是域名。同一个一级域名下的两个二级域名如www.google.com和images.google.com也不能交互使用Cookie，因为二者的域名并不严格相同。如果想所有google.com名下的二级域名都可以使用该Cookie，需要设置Cookie的domain参数,cookie.setDomain(“.google.com”); </li>
+<li>
+<p>注意：</p>
+<ul>
+<li>cookie不可跨域名：不同网站都会使用不同的cookie，他们之间不能通用，用户在访问A网站的时候不会携带上B网站的cookie，而且A网站也只能修改A网站也不能修改B网站颁发给用户的cookie。因为cookie是存放在客户端的，由浏览器管理，浏览器判断一个网站能否操作另一个网站的cookie的依据就是域名。同一个一级域名下的两个二级域名如www.google.com和images.google.com也不能交互使用Cookie，因为二者的域名并不严格相同。如果想所有google.com名下的二级域名都可以使用该Cookie，需要设置Cookie的domain参数,cookie.setDomain(&quot;.google.com&quot;);</li>
 <li>cookie的内容：cookie不仅可以使用ASCII字符与Unicode字符，还可以使用二进制数据。但是存储二进制数据并不实用。由于浏览器每次请求服务器都会携带cookie，因此cookie的内容不宜过多，否则会影响进度，cookie的内容应该少而精</li>
 <li>cookie的安全属性:如果不希望Cookie在HTTP等非安全协议中传输，可以设置Cookie的secure属性为true。浏览器只会在HTTPS和SSL等安全协议中传输此类Cookie。</li>
 </ul>
 </li>
-<li>最后补充一点http-only:<ul>
+<li>
+<p>最后补充一点http-only:</p>
+<ul>
 <li>什么是http-only:如果您在cookie中设置了HttpOnly属性，那么通过js脚本将无法读取到cookie信息，这样能有效的防止XSS攻击</li>
 <li>http-only原理：那HttpOnly就是在设置cookie时接受这样一个参数，一旦被设置，在浏览器的document对象中就看不到cookie了。而浏览器在浏览网页的时候不受任何影响，因为Cookie会被放在浏览器头中发送出去(包括Ajax的时候)，应用程序也一般不会在JS里操作这些敏感Cookie的，对于一些敏感的Cookie我们采用HttpOnly，对于一些需要在应用程序中用JS操作的cookie我们就不予设置，这样就保障了Cookie信息的安全也保证了应用</li>
 <li>设置http-only:如果Cookie具有HttpOnly特性且不能通过客户端脚本访问，则为 true；否则为 false。默认值为 false。</li>
@@ -190,32 +203,43 @@
 </ul>
 </li>
 </ul>
-<h4 id="session"><a href="#session" class="headerlink" title="session"></a>session</h4><ul>
-<li><p>什么是session</p>
-<p>  session是另一种记录客户状态的机制，基于存储在服务器上的一个“表格”，这个表格存有所有用户的信息，当客户端再次访问时只需要从session中查找该客户的状态就可以了</p>
+<h4>session</h4>
+<ul>
+<li>
+<p>什么是session</p>
+<p>session是另一种记录客户状态的机制，基于存储在服务器上的一个“表格”，这个表格存有所有用户的信息，当客户端再次访问时只需要从session中查找该客户的状态就可以了</p>
 </li>
-<li><p>session机制</p>
-<p>  由于有些时候浏览器不一定支持cookie，或者用户可能禁用cookie，因此cookie并不是一直有用，因此就需要session,是服务器端使用的一种记录客户端状态的机制，使用比cookie简单，相应也增加了服务器压力。当浏览器与服务器交换数据中，服务器端就会为客户开辟存储空间，创建session,在创建session的同时，服务器会为该session生成唯一的session id,这个id在随后的请求中被用来重新连接上次会话。在session被创建之后可以用相关方法向其中增加内容，这些内容都只会保存在服务器，发送到客户端的只有session id，当客户端再次发送请求的时候，会将这个session id带上，服务器接受到请求之后就会依据id找到session，从而再次使用</p>
+<li>
+<p>session机制</p>
+<p>由于有些时候浏览器不一定支持cookie，或者用户可能禁用cookie，因此cookie并不是一直有用，因此就需要session,是服务器端使用的一种记录客户端状态的机制，使用比cookie简单，相应也增加了服务器压力。当浏览器与服务器交换数据中，服务器端就会为客户开辟存储空间，创建session,在创建session的同时，服务器会为该session生成唯一的session id,这个id在随后的请求中被用来重新连接上次会话。在session被创建之后可以用相关方法向其中增加内容，这些内容都只会保存在服务器，发送到客户端的只有session id，当客户端再次发送请求的时候，会将这个session id带上，服务器接受到请求之后就会依据id找到session，从而再次使用</p>
 </li>
-<li><p>session的生命周期：</p>
-<p>  session在用户第一次访问服务器时候自动创建，需要注意只有访问JSP、Servlet等程序时才会创建session，只访问html，image等静态资源并不会创建session，如果尚未生成session，也可以使用request.getSession(true)强制生成Session,session生成后，只要用户继续访问，服务器就会更新Session的最后访问时间，并维护Session，用户每访问服务器一次，无论是否读写Session服务器都认为该用户号的Session“active”了一次</p>
+<li>
+<p>session的生命周期：</p>
+<p>session在用户第一次访问服务器时候自动创建，需要注意只有访问JSP、Servlet等程序时才会创建session，只访问html，image等静态资源并不会创建session，如果尚未生成session，也可以使用request.getSession(true)强制生成Session,session生成后，只要用户继续访问，服务器就会更新Session的最后访问时间，并维护Session，用户每访问服务器一次，无论是否读写Session服务器都认为该用户号的Session“active”了一次</p>
 </li>
-<li><p>Session的有效期</p>
-<p>  为防止内存溢出，服务器会把长时间内没有活跃的Session从内存删除。这个时间就是Session的超时时间。如果超过了超时时间没访问过服务器，Session就自动失效了</p>
+<li>
+<p>Session的有效期</p>
+<p>为防止内存溢出，服务器会把长时间内没有活跃的Session从内存删除。这个时间就是Session的超时时间。如果超过了超时时间没访问过服务器，Session就自动失效了</p>
 </li>
-<li><p>Session对浏览器的要求</p>
-<p>  虽然Session保存在服务器，对客户端是透明的，但是它的正常运行仍然需要客户端浏览器的支持，这是因为Session需要cookie作为识别标志，http协议是无状态的，Session不能根据http连接来判断是否为统一客户，因此服务器向客户端浏览器发送一个名为JSESSIONID的cookie，它的值就是该session的id，session依据该cookie来识别是否为同一用户。（服务端执行session机制时候会生成session的id值，这个id值会发送给客户端，客户端每次请求都会把这个id值放到http请求的头部发送给服务端，而这个id值在客户端会保存下来，保存的容器就是cookie）</p>
+<li>
+<p>Session对浏览器的要求</p>
+<p>虽然Session保存在服务器，对客户端是透明的，但是它的正常运行仍然需要客户端浏览器的支持，这是因为Session需要cookie作为识别标志，http协议是无状态的，Session不能根据http连接来判断是否为统一客户，因此服务器向客户端浏览器发送一个名为JSESSIONID的cookie，它的值就是该session的id，session依据该cookie来识别是否为同一用户。（服务端执行session机制时候会生成session的id值，这个id值会发送给客户端，客户端每次请求都会把这个id值放到http请求的头部发送给服务端，而这个id值在客户端会保存下来，保存的容器就是cookie）</p>
 </li>
-<li><p>URL地址重写：</p>
-<p>  这是对客户端不支持cookie的解决方案，URL地址重写的原理就是讲该用户Session的id信息重写到URL地址中，服务器能够解析重写后的URL获取session的id，这样即使客户端不支持cookie，也可以使用session来记录用户状态</p>
+<li>
+<p>URL地址重写：</p>
+<p>这是对客户端不支持cookie的解决方案，URL地址重写的原理就是讲该用户Session的id信息重写到URL地址中，服务器能够解析重写后的URL获取session的id，这样即使客户端不支持cookie，也可以使用session来记录用户状态</p>
 </li>
 </ul>
-<h4 id="WebStorage"><a href="#WebStorage" class="headerlink" title="WebStorage"></a>WebStorage</h4><ul>
-<li><p>WebStorage是什么：</p>
-<p>  WebStorage是HTML新增的本地存储解决方案之一，但并不是为了取代cookie而制定的标准，cookie作为HTTP协议的一部分用来处理客户端和服务器通信是不可或缺的，session正是依赖于实现的客户端状态保持。WebStorage的意图在于解决本来不应该cookie做，却不得不用cookie的本地存储。因为cookie本地存储的量是有限的。WebStorage提供两种类型的API：localStorage和sessionStorage，以下是二者的区别</p>
-<p>  <img src="https://ws1.sinaimg.cn/large/006XqmrNly1fyp1rrczm1j311k08qjsr.jpg" alt=""></p>
+<h4>WebStorage</h4>
+<ul>
+<li>
+<p>WebStorage是什么：</p>
+<p>WebStorage是HTML新增的本地存储解决方案之一，但并不是为了取代cookie而制定的标准，cookie作为HTTP协议的一部分用来处理客户端和服务器通信是不可或缺的，session正是依赖于实现的客户端状态保持。WebStorage的意图在于解决本来不应该cookie做，却不得不用cookie的本地存储。因为cookie本地存储的量是有限的。WebStorage提供两种类型的API：localStorage和sessionStorage，以下是二者的区别</p>
+<p><img src="https://ws1.sinaimg.cn/large/006XqmrNly1fyp1rrczm1j311k08qjsr.jpg" alt=""></p>
 </li>
-<li>WebStorage对象共有的属性和方法（localStorage和sessionStorage都有）<ul>
+<li>
+<p>WebStorage对象共有的属性和方法（localStorage和sessionStorage都有）</p>
+<ul>
 <li>length:唯一的属性，只读，用来获取storage内的键值对数量。</li>
 <li>key()：根据index获取storage的键名</li>
 <li>getItem()：根据key获取storage内的对应value</li>
@@ -224,7 +248,9 @@
 <li>clear()：清空storage对象</li>
 </ul>
 </li>
-<li>事件：在WebStorage发生变化的时候触发，可以用此监视不同页面对storage的修改。一个页面的缓存发生改变时，会触发其他页面的<code>window.onstorage</code>或<code>window.addEventListener(&#39;storage&#39;,handle,false)</code>事件。这个事件的handle函数有个参数。它是StorageEvent对象。它包含了与存储变化有关的所有必要信息。<code>function handle(e)。{......}</code>。e就是StorageEvent对象。属性有：<ul>
+<li>
+<p>事件：在WebStorage发生变化的时候触发，可以用此监视不同页面对storage的修改。一个页面的缓存发生改变时，会触发其他页面的<code>window.onstorage</code>或<code>window.addEventListener('storage',handle,false)</code>事件。这个事件的handle函数有个参数。它是StorageEvent对象。它包含了与存储变化有关的所有必要信息。<code>function handle(e)。{......}</code>。e就是StorageEvent对象。属性有：</p>
+<ul>
 <li>key：包含了存储过程中发生变化（更新，删除）的键</li>
 <li>oldValue：发生变化前的值。对于新添加的数据，oldValue的属性值是null</li>
 <li>newValue：发生变化后的值。对于删除的数据，newValue的值是null</li>
@@ -232,7 +258,9 @@
 <li>storageArea：一个引用，指向值发生变化的Storage。</li>
 </ul>
 </li>
-<li>WebStorage与coookie<ul>
+<li>
+<p>WebStorage与coookie</p>
+<ul>
 <li>从容量上讲WebStorage一般浏览器提供5M的存储空间，对于绝大部分操作足矣</li>
 <li>安全性上WebStorage并不作为HTTP header发送的浏览器，所以相对安全</li>
 <li>从流量上讲，因为WebStorage不传送到服务器，所以不必要的流量可以节省</li>
@@ -240,26 +268,31 @@
 </ul>
 </li>
 </ul>
-<ol>
+<ol start="2">
 <li>AJAX</li>
 </ol>
 <ul>
-<li><p>AJAX是什么？</p>
-<p>  它的意思是异步的javascript和XML，它是一种使用现有标准的新方法，它最大 的优点就是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。</p>
+<li>
+<p>AJAX是什么？</p>
+<p>它的意思是异步的javascript和XML，它是一种使用现有标准的新方法，它最大 的优点就是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。</p>
 </li>
-<li><p>关于同步和异步：</p>
-<p>  异步传输是面向字符的传输，单位是字符，而同步传输是面向比特的传输，它的单位是帧，它传输的时候要求接受放和发送方的时钟是保持一致的。由于同步传输一次性传输数据比异步多，因此通常同步传输比异步传输快速很多，接受放歌不必对每个字符进行开始和停止的操作，一旦检测到帧同步字符，它就在接下来的数据到达时接受它们，而且同步传输的开销也小很多，随着数据帧中实际数据比特位的增加，开销比特所占的百分比也相应减少，但是数据比特越长，缓存数据所需的缓冲区也越大，这就限制了一个帧的大小，另外帧越大，它占据传输媒体的连续时间也越长，在极端情况下，这将导致其他用户等太久。</p>
+<li>
+<p>关于同步和异步：</p>
+<p>异步传输是面向字符的传输，单位是字符，而同步传输是面向比特的传输，它的单位是帧，它传输的时候要求接受放和发送方的时钟是保持一致的。由于同步传输一次性传输数据比异步多，因此通常同步传输比异步传输快速很多，接受放歌不必对每个字符进行开始和停止的操作，一旦检测到帧同步字符，它就在接下来的数据到达时接受它们，而且同步传输的开销也小很多，随着数据帧中实际数据比特位的增加，开销比特所占的百分比也相应减少，但是数据比特越长，缓存数据所需的缓冲区也越大，这就限制了一个帧的大小，另外帧越大，它占据传输媒体的连续时间也越长，在极端情况下，这将导致其他用户等太久。</p>
 </li>
-<li>ajax所包含的技术（它是几种原有技术的结合体）<ul>
+<li>
+<p>ajax所包含的技术（它是几种原有技术的结合体）</p>
+<ul>
 <li>使用css和XHTML表示</li>
 <li>使用dom模型来交互和动态显示</li>
 <li>使用XMLHttpRequest来和服务器进行异步通信</li>
 <li>使用javascript来绑定和调用</li>
 </ul>
 </li>
-<li><p>ajax原理和XmlHttpRequest对象</p>
-<p>  Ajax的原理简单来说通过XmlHttpRequest对象来向服务器发异步请求，从服务器获得数据，然后用javascript来操作DOM而更新页面,XMLHttpRequest是ajax的核心机制，是一种支持异步请求的技术。javascript可以及时向服务器提出请求和处理响应，而不阻塞用户,达到无刷新的效果</p>
-<p>  XMLHttpRequest这个对象的属性:</p>
+<li>
+<p>ajax原理和XmlHttpRequest对象</p>
+<p>Ajax的原理简单来说通过XmlHttpRequest对象来向服务器发异步请求，从服务器获得数据，然后用javascript来操作DOM而更新页面,XMLHttpRequest是ajax的核心机制，是一种支持异步请求的技术。javascript可以及时向服务器提出请求和处理响应，而不阻塞用户,达到无刷新的效果</p>
+<p>XMLHttpRequest这个对象的属性:</p>
 <ul>
 <li>onreadystatechange：每次状态改变所触发事件的事件处理程序（就是一个函数）</li>
 <li>responseText：从服务器进程返回数据的字符串形式</li>
@@ -269,28 +302,32 @@
 <li>readyState: 对象状态值（0——请求未初始化；1——服务器连接已建立；2——请求已接收；3——请求处理中；4——请求已完成，且响应已就绪）</li>
 </ul>
 </li>
-<li><p>创建XMLHttpRequest对象</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xmlhttp;</span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.XMLHttpRequest)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码</span></span><br><span class="line">    xmlhttp=<span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// IE6, IE5 浏览器执行代码</span></span><br><span class="line">    xmlhttp=<span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<p>创建XMLHttpRequest对象</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xmlhttp;</span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.XMLHttpRequest)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码</span></span><br><span class="line">    xmlhttp=<span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// IE6, IE5 浏览器执行代码</span></span><br><span class="line">    xmlhttp=<span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 </li>
-<li><p>AJAX-向服务器发送请求</p>
+<li>
+<p>AJAX-向服务器发送请求</p>
 <ul>
 <li>向服务器发送请求要使用XMLHttpRequest对象的open()和send()方法：<code>open(method,url,async)</code>这是规定请求类型、URL以及是否异步（true异步，false同步）处理请求，<code>send(string)</code>这一步将请求发送到服务器，string仅用于post请求。如果需要像HTML表单那样POST数据，需要使用<code>setRequestHeader(header,value)</code>来添加HTTP头，header用来规定头的名称，value规定头的值</li>
-<li><p>关于同步还是异步：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当使用 async=true 时，请规定在响应处于 onreadystatechange 事件中的就绪状态时执行的函数</span></span><br><span class="line">xmlhttp.onreadystatechange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//这个事件其实触发了五次，状态每边一次就会触发</span></span><br><span class="line">  <span class="keyword">if</span> (xmlhttp.readyState==<span class="number">4</span> &amp;&amp; xmlhttp.status==<span class="number">200</span>)&#123;</span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"myDiv"</span>).innerHTML=xmlhttp.responseText;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">xmlhttp.open(<span class="string">"GET"</span>,<span class="string">"test1.txt"</span>,<span class="literal">true</span>);</span><br><span class="line">xmlhttp.send();</span><br><span class="line"><span class="comment">//使用 async=false</span></span><br><span class="line">xmlhttp.open(<span class="string">"GET"</span>,<span class="string">"test1.txt"</span>,<span class="literal">false</span>);</span><br><span class="line">xmlhttp.send();</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"myDiv"</span>).innerHTML=xmlhttp.responseText;</span><br></pre></td></tr></table></figure>
-</li>
+<li>关于同步还是异步：</li>
 </ul>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当使用 async=true 时，请规定在响应处于 onreadystatechange 事件中的就绪状态时执行的函数</span></span><br><span class="line">xmlhttp.onreadystatechange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//这个事件其实触发了五次，状态每边一次就会触发</span></span><br><span class="line">  <span class="keyword">if</span> (xmlhttp.readyState==<span class="number">4</span> &amp;&amp; xmlhttp.status==<span class="number">200</span>)&#123;</span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"myDiv"</span>).innerHTML=xmlhttp.responseText;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">xmlhttp.open(<span class="string">"GET"</span>,<span class="string">"test1.txt"</span>,<span class="literal">true</span>);</span><br><span class="line">xmlhttp.send();</span><br><span class="line"><span class="comment">//使用 async=false</span></span><br><span class="line">xmlhttp.open(<span class="string">"GET"</span>,<span class="string">"test1.txt"</span>,<span class="literal">false</span>);</span><br><span class="line">xmlhttp.send();</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"myDiv"</span>).innerHTML=xmlhttp.responseText;</span><br></pre></td></tr></table></figure></p>
 </li>
-<li><p>AJAX-服务器响应</p>
-<p>  XMLHttpRequest对象的responseText或responseXML属性可以获得响应数据分别以字符串形式与XML形式。</p>
+<li>
+<p>AJAX-服务器响应</p>
+<p>XMLHttpRequest对象的responseText或responseXML属性可以获得响应数据分别以字符串形式与XML形式。</p>
 <ul>
 <li>responseText：服务的响应数据并非XML,用此方法返回字符串</li>
 <li>responseXML：服务器的响应式XML，并且需要作为XML进行解析</li>
 </ul>
 </li>
-<li><p>AJAX-onreadystatechange事件</p>
-<p>  当请求被发送到服务器时，需要执行一些响应的任务，每当readyState改变时，就会触发onreadystatechange事件。而readyState属性存有XMLHttpRequest的状态信息。</p>
+<li>
+<p>AJAX-onreadystatechange事件</p>
+<p>当请求被发送到服务器时，需要执行一些响应的任务，每当readyState改变时，就会触发onreadystatechange事件。而readyState属性存有XMLHttpRequest的状态信息。</p>
 </li>
-<li><p>AJAX-同步与异步的区别</p>
+<li>
+<p>AJAX-同步与异步的区别</p>
 <ul>
 <li>异步：从用户角度看，异步就是用户发送一个数据包之后不需要等待服务器的回应，可以继续发送请求。异步中页面上的操作和服务器端的操作之间不会造成阻塞。从任务的角度看，AJAX请求内容分的时候是异步的，当请求完成之后，就会触发请求完成的事件，然后把回调函数放在任务队列中，等住线程执行该回调函数时还是单线程的。</li>
 <li>同步：发送方发送数据之后，等待到接收方的回应才能继续发下一个数据包。同步请求的过程就是：客户端请求-&gt;服务器端处理-&gt;响应-&gt;页面载入</li>
@@ -298,33 +335,38 @@
 </ul>
 </li>
 </ul>
-<ol>
+<ol start="3">
 <li>XML</li>
 <li>图片的预加载与懒加载</li>
 <li>JS的单线程和异步</li>
 </ol>
 <ul>
-<li><p>前言：</p>
-<p>  js本身是单线程的，因此它本身是无法实现异步的，但是js的宿主环境比如（浏览器和Node）是多线程的，宿主环境通过某种方式（事件驱动）使得js具备了异步的属性。</p>
+<li>
+<p>前言：</p>
+<p>js本身是单线程的，因此它本身是无法实现异步的，但是js的宿主环境比如（浏览器和Node）是多线程的，宿主环境通过某种方式（事件驱动）使得js具备了异步的属性。</p>
 </li>
-<li><p>浏览器：</p>
-<p>  js是单线程语言，浏览器只分配给Js一个主线程，用来执行任务（函数），但是一次只能执行一个任务，这些任务形成一个任务队列等候执行，但是前端的某些任务非常耗时比如网络请求，定时器和事件监听，如果让他们和别的任务一样排队等待执行的话，执行效率就会非常低，甚至导致页面假死，所以浏览器为蛇蝎耗时任务开辟了另外的线程，主要包括http请求线程，浏览器定时触发器，浏览器事件触发线程，这些任务都是异步的。</p>
+<li>
+<p>浏览器：</p>
+<p>js是单线程语言，浏览器只分配给Js一个主线程，用来执行任务（函数），但是一次只能执行一个任务，这些任务形成一个任务队列等候执行，但是前端的某些任务非常耗时比如网络请求，定时器和事件监听，如果让他们和别的任务一样排队等待执行的话，执行效率就会非常低，甚至导致页面假死，所以浏览器为蛇蝎耗时任务开辟了另外的线程，主要包括http请求线程，浏览器定时触发器，浏览器事件触发线程，这些任务都是异步的。</p>
 </li>
-<li><p>浏览器线程：</p>
-<p>  js运作在浏览器中是单线程的，即js代码始终在一个线程上执行，这个线程称为js引擎线程，浏览器是多线程的，除了js引擎线程（执行js任务），它还有：UI渲染线程（渲染页面），浏览器事件触发线程（用于控制交互，响应用户），http请求线程（ajax是委托给浏览器新开一个http线程），eventloop轮询的处理线程（处理轮询消息队列），定时器触发线程（setInterval与setTimeout所在线程）</p>
-<p>  浏览器中Js的任务：执行js代码，对用户的输入做出反应，处理异步的网络请求</p>
-<p>  注意：</p>
+<li>
+<p>浏览器线程：</p>
+<p>js运作在浏览器中是单线程的，即js代码始终在一个线程上执行，这个线程称为js引擎线程，浏览器是多线程的，除了js引擎线程（执行js任务），它还有：UI渲染线程（渲染页面），浏览器事件触发线程（用于控制交互，响应用户），http请求线程（ajax是委托给浏览器新开一个http线程），eventloop轮询的处理线程（处理轮询消息队列），定时器触发线程（setInterval与setTimeout所在线程）</p>
+<p>浏览器中Js的任务：执行js代码，对用户的输入做出反应，处理异步的网络请求</p>
+<p>注意：</p>
 <ul>
 <li>需要强调浏览器界面渲染线程和js引擎线程是互斥的，主线程执行任务时，浏览器渲染线程处于挂起状态，这样dom的变化就不会引起界面的立刻渲染</li>
 <li>js是单线程但是Js引擎是多线程的，包括一个主线程，和多个任务队列</li>
 </ul>
 </li>
-<li><p>主线程：</p>
-<p>  以栈的形式存储任务，同步任务按顺序进入栈，当它执行结束就会弹出栈，之后才能Push接下来的同步任务，但是异步任务不会push到栈中，他们会在定时器的时间到达之后先来后到依次进入对应的优先级的任务队列。当主线程中的任务为空时，就会将任务队列中的任务移到主程序中依次执行。</p>
+<li>
+<p>主线程：</p>
+<p>以栈的形式存储任务，同步任务按顺序进入栈，当它执行结束就会弹出栈，之后才能Push接下来的同步任务，但是异步任务不会push到栈中，他们会在定时器的时间到达之后先来后到依次进入对应的优先级的任务队列。当主线程中的任务为空时，就会将任务队列中的任务移到主程序中依次执行。</p>
 </li>
-<li><p>任务队列（callback queue）：</p>
-<p> 浏览器为网络请求这样的异步任务单独开了一个线程——任务队列，任务队列中存储的就是异步任务的回调函数。当这些异步任务完成之后，主线任务是通过回调函数知道任务完成的，整个程序是事件驱动的。</p>
-<p> 具体来说异步运行的机制如下步骤所示：（其中有同步任务与异步任务）</p>
+<li>
+<p>任务队列（callback queue）：</p>
+<p>浏览器为网络请求这样的异步任务单独开了一个线程——任务队列，任务队列中存储的就是异步任务的回调函数。当这些异步任务完成之后，主线任务是通过回调函数知道任务完成的，整个程序是事件驱动的。</p>
+<p>具体来说异步运行的机制如下步骤所示：（其中有同步任务与异步任务）</p>
 <ul>
 <li>所有同步任务都在主线程，形成一个执行栈</li>
 <li>主线程之外，还存在一个“任务队列”，只要异步任务有了运行结果，就在任务队列之中放置一个事件</li>
@@ -332,27 +374,48 @@
 <li>主线程重复上述步骤</li>
 </ul>
 </li>
-<li>定时器：<br>  定时器用于设置回调函数进入任务队列的等待时间，一旦到达时间就会，回调函数就会移入任务队列，否则会继续等待</li>
-<li><p>event loop流程图：</p>
-<p>  <img src="https://ws1.sinaimg.cn/large/006XqmrNly1fyskpgil6rj319q0mwguu.jpg" alt=""></p>
+<li>
+<p>定时器：
+定时器用于设置回调函数进入任务队列的等待时间，一旦到达时间就会，回调函数就会移入任务队列，否则会继续等待</p>
 </li>
-<li><p>任务队列的优先级</p>
-<p>  一个事件循环可以由多个任务队列，每个任务队列都是严格按照先进先出的顺序执行的，但是不同的队列有不同的优先级，</p>
+<li>
+<p>event loop流程图：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006XqmrNly1fyskpgil6rj319q0mwguu.jpg" alt=""></p>
+</li>
+<li>
+<p>任务队列的优先级</p>
+<p>一个事件循环可以由多个任务队列，每个任务队列都是严格按照先进先出的顺序执行的，但是不同的队列有不同的优先级，</p>
 </li>
 </ul>
-<ol>
-<li><p>get和post<br> 与post相比，get更简单也更快，并且大部分都能用。但是在以下情况中只能使用post请求：无法使用缓存文件（更新服务器上的文件或数据库）；向服务器发送大量数据（post没有数据量限制）；发送包含未知字符的用户输入时，post比get更稳定也更可靠</p>
+<ol start="6">
+<li>
+<p>get和post
+与post相比，get更简单也更快，并且大部分都能用。但是在以下情况中只能使用post请求：无法使用缓存文件（更新服务器上的文件或数据库）；向服务器发送大量数据（post没有数据量限制）；发送包含未知字符的用户输入时，post比get更稳定也更可靠</p>
 </li>
-<li><p>跨域的解决</p>
+<li>
+<p>跨域的解决</p>
 </li>
-<li>JSONP</li>
-<li>XSS</li>
-<li>vue学习</li>
-<li>npm</li>
-<li>webpack</li>
-<li>浏览器的缓存机制</li>
+<li>
+<p>JSONP</p>
+</li>
+<li>
+<p>XSS</p>
+</li>
+<li>
+<p>vue学习</p>
+</li>
+<li>
+<p>npm</p>
+</li>
+<li>
+<p>webpack</p>
+</li>
+<li>
+<p>浏览器的缓存机制</p>
+</li>
 </ol>
-<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ol>
+<h3>问题</h3>
+<ol>
 <li>localstorage什么时候删掉，能不能手动删除</li>
 <li>怎么实现多个页面的数据共享用localstorage</li>
 <li>localstorage什么时候回触发onstorage事件</li>
@@ -383,7 +446,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#cookie"><span class="toc-number">1.</span> <span class="toc-text"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#session"><span class="toc-number">2.</span> <span class="toc-text"><a href="#session" class="headerlink" title="session"></a>session</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WebStorage"><span class="toc-number">3.</span> <span class="toc-text"><a href="#WebStorage" class="headerlink" title="WebStorage"></a>WebStorage</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题"><span class="toc-number"></span> <span class="toc-text"><a href="#&#x95EE;&#x9898;" class="headerlink" title="&#x95EE;&#x9898;"></a>&#x95EE;&#x9898;</span></a>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">cookie</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">session</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">WebStorage</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text">&#x95EE;&#x9898;</span></a>
     </div>
 
     <div id="share-footer" style="display: none">

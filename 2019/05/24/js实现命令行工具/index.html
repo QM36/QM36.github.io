@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="一、首先写一个可执行脚本 新建一个js文件hello.js，这个文件就是之后用自定义命令唤醒的文件 123#!/usr/bin/env node//第一行用来描述node的所在位置，不可省console.log(&apos;hello pig!&apos;) 二、修改这个文件的权限 1chmod 755 hello 这个命令用来规范文件所有者（7——可读可写可操作）、同一个的用户组和其他用户组的权限（5——可读可操作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js实现命令行工具(2019-5-24)">
+<meta property="og:url" content="https://qm36.github.io/2019/05/24/js实现命令行工具/index.html">
+<meta property="og:site_name" content="QM36&#39;S BLOG">
+<meta property="og:description" content="一、首先写一个可执行脚本 新建一个js文件hello.js，这个文件就是之后用自定义命令唤醒的文件 123#!/usr/bin/env node//第一行用来描述node的所在位置，不可省console.log(&apos;hello pig!&apos;) 二、修改这个文件的权限 1chmod 755 hello 这个命令用来规范文件所有者（7——可读可写可操作）、同一个的用户组和其他用户组的权限（5——可读可操作">
+<meta property="og:updated_time" content="2019-05-24T08:07:51.289Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js实现命令行工具(2019-5-24)">
+<meta name="twitter:description" content="一、首先写一个可执行脚本 新建一个js文件hello.js，这个文件就是之后用自定义命令唤醒的文件 123#!/usr/bin/env node//第一行用来描述node的所在位置，不可省console.log(&apos;hello pig!&apos;) 二、修改这个文件的权限 1chmod 755 hello 这个命令用来规范文件所有者（7——可读可写可操作）、同一个的用户组和其他用户组的权限（5——可读可操作">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>js实现命令行工具(2019-5-24)</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/QM36">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2019/05/24/防抖与节流/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://qm36.github.io/2019/05/24/js实现命令行工具/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://qm36.github.io/2019/05/24/js实现命令行工具/&text=js实现命令行工具(2019-5-24)"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://qm36.github.io/2019/05/24/js实现命令行工具/&title=js实现命令行工具(2019-5-24)"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://qm36.github.io/2019/05/24/js实现命令行工具/&is_video=false&description=js实现命令行工具(2019-5-24)"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=js实现命令行工具(2019-5-24)&body=Check out this article: https://qm36.github.io/2019/05/24/js实现命令行工具/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://qm36.github.io/2019/05/24/js实现命令行工具/&title=js实现命令行工具(2019-5-24)"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://qm36.github.io/2019/05/24/js实现命令行工具/&title=js实现命令行工具(2019-5-24)"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://qm36.github.io/2019/05/24/js实现命令行工具/&title=js实现命令行工具(2019-5-24)"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://qm36.github.io/2019/05/24/js实现命令行工具/&title=js实现命令行工具(2019-5-24)"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://qm36.github.io/2019/05/24/js实现命令行工具/&name=js实现命令行工具(2019-5-24)&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">&#x4E00;&#x3001;&#x9996;&#x5148;&#x5199;&#x4E00;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x811A;&#x672C;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">&#x4E8C;&#x3001;&#x4FEE;&#x6539;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x6743;&#x9650;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">&#x4E09;&#x3001;&#x4FEE;&#x6539;&#x5524;&#x9192;&#x8DEF;&#x5F84;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">&#x56DB;&#x3001;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">&#x4E94;&#x3001;&#x4FEE;&#x6539;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        js实现命令行工具(2019-5-24)
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">QM36'S BLOG</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2019-05-24T08:07:14.135Z" itemprop="datePublished">2019-05-24</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h4>一、首先写一个可执行脚本</h4>
+<p>新建一个<code>js</code>文件<code>hello.js</code>，这个文件就是之后用自定义命令唤醒的文件</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env node</span></span><br><span class="line"><span class="comment">//第一行用来描述node的所在位置，不可省</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'hello pig!'</span>)</span><br></pre></td></tr></table></figure></p>
+<h4>二、修改这个文件的权限</h4>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 hello</span><br></pre></td></tr></table></figure></p>
+<p>这个命令用来规范文件所有者（7——可读可写可操作）、同一个的用户组和其他用户组的权限（5——可读可操作），主要是增加可操作权（5——可读可操作），如果想要查看文件目前权限可以输入<code>ls -l</code></p>
+<p>修改之后<code>hello.js</code>就可以执行了，在命令行输入<code>./hello.js</code>就能看到<code>hello pig!</code></p>
+<h4>三、修改唤醒路径</h4>
+<p>方法一：将<code>hello.js</code>的路径加入环境变量<code>PATH</code></p>
+<p>方法二：</p>
+<ul>
+<li>
+<p>在当前目录创建<code>package.json</code>，添加如下内容</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;hello&quot;,</span><br><span class="line">  &quot;bin&quot;: &#123;</span><br><span class="line">    &quot;pig&quot;: &quot;hello&quot;</span><br><span class="line">    //前者是执行命令，后者是执行文件名称</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</li>
+</ul>
+<ul>
+<li>
+<p>执行命令<code>npm link</code></p>
+</li>
+<li>
+<p>现在可以直接输入<code>pig</code>直接唤醒文件，输入想要的内容</p>
+</li>
+</ul>
+<h4>四、命令行参数</h4>
+<p>在执行文件时，在执行命令后加参数，可以用<code>process.argv[2]</code>获取，所有的参数分别表表node在系统中的位置，以及需要唤醒的js文件在系统中的位置，以及后带的参数</p>
+<h4>五、修改可执行文件</h4>
+<p>为了让整个程序更像是命令行，可以将需要的操作或函数提成另外的文件<code>index.js</code>，再将之前的<code>hello.js</code>修改成如下</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env node</span></span><br><span class="line"><span class="keyword">const</span> readline = <span class="built_in">require</span>(<span class="string">'readline'</span>); <span class="comment">//引入nodejs的内置模块readline，这样可以获取命令行的输入</span></span><br><span class="line"><span class="keyword">let</span> catOrPig = <span class="built_in">require</span>(<span class="string">'./index'</span>); </span><br><span class="line"><span class="comment">//从其他文件引入函数</span></span><br><span class="line"><span class="keyword">const</span> rl = readline.createInterface(process.stdin, process.stdout);</span><br><span class="line"><span class="keyword">let</span> language = process.argv[<span class="number">2</span>] </span><br><span class="line"><span class="comment">//这里的process.argv是唤醒程序的参数数组，前两个参数代表node在系统中的位置，以及需要唤醒的js文件在系统中的位置</span></span><br><span class="line">rl.setPrompt(<span class="string">'cop&gt; '</span>); </span><br><span class="line"><span class="comment">//这里可以选择设置每一行的提示符</span></span><br><span class="line">rl.prompt();</span><br><span class="line"><span class="comment">//这里用来监听读取命令行的用户输入</span></span><br><span class="line"></span><br><span class="line">rl.on(<span class="string">'line'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">line</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">switch</span>(line) &#123;</span><br><span class="line">	<span class="comment">//参数line为用户在这一行的输入</span></span><br><span class="line">        <span class="keyword">case</span> <span class="string">'exit'</span>:</span><br><span class="line">            rl.close();</span><br><span class="line">            <span class="comment">//退出</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            catOrPig(language, line);</span><br><span class="line">            <span class="comment">//需要执行的操作</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    rl.prompt();</span><br><span class="line">    <span class="comment">//继续监听命令行输入</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">rl.on(<span class="string">'close'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    process.exit(<span class="number">0</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/QM36">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">&#x4E00;&#x3001;&#x9996;&#x5148;&#x5199;&#x4E00;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x811A;&#x672C;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">&#x4E8C;&#x3001;&#x4FEE;&#x6539;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x6743;&#x9650;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">&#x4E09;&#x3001;&#x4FEE;&#x6539;&#x5524;&#x9192;&#x8DEF;&#x5F84;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">&#x56DB;&#x3001;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">&#x4E94;&#x3001;&#x4FEE;&#x6539;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://qm36.github.io/2019/05/24/js实现命令行工具/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://qm36.github.io/2019/05/24/js实现命令行工具/&text=js实现命令行工具(2019-5-24)"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://qm36.github.io/2019/05/24/js实现命令行工具/&title=js实现命令行工具(2019-5-24)"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://qm36.github.io/2019/05/24/js实现命令行工具/&is_video=false&description=js实现命令行工具(2019-5-24)"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=js实现命令行工具(2019-5-24)&body=Check out this article: https://qm36.github.io/2019/05/24/js实现命令行工具/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://qm36.github.io/2019/05/24/js实现命令行工具/&title=js实现命令行工具(2019-5-24)"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://qm36.github.io/2019/05/24/js实现命令行工具/&title=js实现命令行工具(2019-5-24)"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://qm36.github.io/2019/05/24/js实现命令行工具/&title=js实现命令行工具(2019-5-24)"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://qm36.github.io/2019/05/24/js实现命令行工具/&title=js实现命令行工具(2019-5-24)"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://qm36.github.io/2019/05/24/js实现命令行工具/&name=js实现命令行工具(2019-5-24)&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 qumeng
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/QM36">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
