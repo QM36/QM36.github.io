@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="前言 写过类似的文章是在Centos7.5上部署项目，其实原理差不多，所以此篇文章就不多赘述，只写区别点 准备   安装nginx(在ubuntu里面不是yum) 12apt-get update;apt-get install nginx;   安装git   部署过程   首先可以查看安装是否成功，需要在终端输入命令，启动服务 1service nginx start 这个时候就可以在浏览器中">
+    <meta name="description" content="前言写过类似的文章是在Centos7.5上部署项目，其实原理差不多，所以此篇文章就不多赘述，只写区别点 准备 安装nginx(在ubuntu里面不是yum)  12apt-get update;apt-get install nginx;  安装git   部署过程 首先可以查看安装是否成功，需要在终端输入命令，启动服务  1service nginx start  这个时候就可以在浏览器中输入服">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于nginx在ubuntu云服务器上部署web项目（11.27）">
 <meta property="og:url" content="https://qm36.github.io/2018/11/27/基于nginx在ubuntu云服务器上部署web项目/index.html">
 <meta property="og:site_name" content="QM36&#39;S BLOG">
-<meta property="og:description" content="前言 写过类似的文章是在Centos7.5上部署项目，其实原理差不多，所以此篇文章就不多赘述，只写区别点 准备   安装nginx(在ubuntu里面不是yum) 12apt-get update;apt-get install nginx;   安装git   部署过程   首先可以查看安装是否成功，需要在终端输入命令，启动服务 1service nginx start 这个时候就可以在浏览器中">
+<meta property="og:description" content="前言写过类似的文章是在Centos7.5上部署项目，其实原理差不多，所以此篇文章就不多赘述，只写区别点 准备 安装nginx(在ubuntu里面不是yum)  12apt-get update;apt-get install nginx;  安装git   部署过程 首先可以查看安装是否成功，需要在终端输入命令，启动服务  1service nginx start  这个时候就可以在浏览器中输入服">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006XqmrNly1fxmrfzwv33j30v60a6gmb.jpg">
 <meta property="og:updated_time" content="2018-11-27T09:55:33.064Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于nginx在ubuntu云服务器上部署web项目（11.27）">
-<meta name="twitter:description" content="前言 写过类似的文章是在Centos7.5上部署项目，其实原理差不多，所以此篇文章就不多赘述，只写区别点 准备   安装nginx(在ubuntu里面不是yum) 12apt-get update;apt-get install nginx;   安装git   部署过程   首先可以查看安装是否成功，需要在终端输入命令，启动服务 1service nginx start 这个时候就可以在浏览器中">
+<meta name="twitter:description" content="前言写过类似的文章是在Centos7.5上部署项目，其实原理差不多，所以此篇文章就不多赘述，只写区别点 准备 安装nginx(在ubuntu里面不是yum)  12apt-get update;apt-get install nginx;  安装git   部署过程 首先可以查看安装是否成功，需要在终端输入命令，启动服务  1service nginx start  这个时候就可以在浏览器中输入服">
 <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006XqmrNly1fxmrfzwv33j30v60a6gmb.jpg">
     
     
@@ -99,7 +99,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">&#x524D;&#x8A00;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">&#x51C6;&#x5907;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">&#x6700;&#x540E;&#x5B8C;&#x5584;</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text"><a href="#&#x524D;&#x8A00;" class="headerlink" title="&#x524D;&#x8A00;"></a>&#x524D;&#x8A00;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-number">2.</span> <span class="toc-text"><a href="#&#x51C6;&#x5907;" class="headerlink" title="&#x51C6;&#x5907;"></a>&#x51C6;&#x5907;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署过程"><span class="toc-number">3.</span> <span class="toc-text"><a href="#&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;" class="headerlink" title="&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;"></a>&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最后完善"><span class="toc-number">4.</span> <span class="toc-text"><a href="#&#x6700;&#x540E;&#x5B8C;&#x5584;" class="headerlink" title="&#x6700;&#x540E;&#x5B8C;&#x5584;"></a>&#x6700;&#x540E;&#x5B8C;&#x5584;</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -133,42 +133,32 @@
   
 
   <div class="content" itemprop="articleBody">
-    <h2>前言</h2>
-<p>写过类似的文章是在Centos7.5上部署项目，其实原理差不多，所以此篇文章就不多赘述，只写区别点</p>
-<h2>准备</h2>
-<ol>
-<li>
-<p>安装nginx(在ubuntu里面不是yum)
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get update;</span><br><span class="line">apt-get install nginx;</span><br></pre></td></tr></table></figure></p>
+    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>写过类似的文章是在Centos7.5上部署项目，其实原理差不多，所以此篇文章就不多赘述，只写区别点</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ol>
+<li><p>安装nginx(在ubuntu里面不是yum)</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get update;</span><br><span class="line">apt-get install nginx;</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>安装git</p>
+<li><p>安装git</p>
 </li>
 </ol>
-<h2>部署过程</h2>
-<ol>
-<li>
-<p>首先可以查看安装是否成功，需要在终端输入命令，启动服务
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service nginx start</span><br></pre></td></tr></table></figure></p>
-<p>这个时候就可以在浏览器中输入服务器IP访问到<code>nginx</code>访问页</p>
+<h2 id="部署过程"><a href="#部署过程" class="headerlink" title="部署过程"></a>部署过程</h2><ol>
+<li><p>首先可以查看安装是否成功，需要在终端输入命令，启动服务</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service nginx start</span><br></pre></td></tr></table></figure>
+<p> 这个时候就可以在浏览器中输入服务器IP访问到<code>nginx</code>访问页</p>
 </li>
-<li>
-<p>去<code>github</code>上找到自己需要部署的项目，找一个合适的文件夹<code>clone</code>下来，并<code>pwd</code>查看路径</p>
+<li><p>去<code>github</code>上找到自己需要部署的项目，找一个合适的文件夹<code>clone</code>下来，并<code>pwd</code>查看路径</p>
 </li>
-<li>
-<p>部署自己项目，首先需要打开配置文件</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/nginx/sites-available/default</span><br></pre></td></tr></table></figure></p>
-<p>配置文件内容如下图所示</p>
-<p><img src="https://ws1.sinaimg.cn/large/006XqmrNly1fxmrfzwv33j30v60a6gmb.jpg" alt=""></p>
-<p>将配置文件中的<code>root</code>后的内容修改为部署项目的路径，<code>index</code>后面就是展示主页</p>
+<li><p>部署自己项目，首先需要打开配置文件</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/nginx/sites-available/default</span><br></pre></td></tr></table></figure>
+<p> 配置文件内容如下图所示</p>
+<p> <img src="https://ws1.sinaimg.cn/large/006XqmrNly1fxmrfzwv33j30v60a6gmb.jpg" alt=""></p>
+<p> 将配置文件中的<code>root</code>后的内容修改为部署项目的路径，<code>index</code>后面就是展示主页</p>
 </li>
-<li>
-<p>重启nginx，之后在浏览器中输入<code>ip</code>即可访问
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br></pre></td></tr></table></figure></p>
+<li><p>重启nginx，之后在浏览器中输入<code>ip</code>即可访问</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2>最后完善</h2>
-<ol>
+<h2 id="最后完善"><a href="#最后完善" class="headerlink" title="最后完善"></a>最后完善</h2><ol>
 <li>可以购买域名然后，配到服务器上，具体见<a href="http://qm36mmz.xyz/2018/09/30/%E5%9F%BA%E4%BA%8Enginx%E5%9C%A8centos7.5%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2web%E9%A1%B9%E7%9B%AE/" target="_blank" rel="noopener">基于nginx在centos7.5云服务器上部署web项目</a></li>
 </ol>
 
@@ -197,7 +187,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">&#x524D;&#x8A00;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">&#x51C6;&#x5907;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">&#x6700;&#x540E;&#x5B8C;&#x5584;</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text"><a href="#&#x524D;&#x8A00;" class="headerlink" title="&#x524D;&#x8A00;"></a>&#x524D;&#x8A00;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-number">2.</span> <span class="toc-text"><a href="#&#x51C6;&#x5907;" class="headerlink" title="&#x51C6;&#x5907;"></a>&#x51C6;&#x5907;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署过程"><span class="toc-number">3.</span> <span class="toc-text"><a href="#&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;" class="headerlink" title="&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;"></a>&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最后完善"><span class="toc-number">4.</span> <span class="toc-text"><a href="#&#x6700;&#x540E;&#x5B8C;&#x5584;" class="headerlink" title="&#x6700;&#x540E;&#x5B8C;&#x5584;"></a>&#x6700;&#x540E;&#x5B8C;&#x5584;</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">

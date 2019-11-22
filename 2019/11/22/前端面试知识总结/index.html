@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="HTML &amp;lt;!DOCTYPE html&amp;gt;  定义：DOCTYPE标签是一种标准通用标记语言的文档类型声明，它的目的是要告诉标准通用标记语言解析器，它应该使用什么样的文档类型定义（DTD）来解析文档。&amp;lt;!DOCTYPE&amp;gt;声明必须是HTML文档的第一行，位于&amp;lt;html&amp;gt;标签之前 作用：避免浏览器的怪异模式，避免浏览器使用自己的怪异模式解析渲染页面，这样在所有的浏览器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端面试知识总结(2019-5-24)">
+<meta property="og:url" content="https://qm36.github.io/2019/11/22/前端面试知识总结/index.html">
+<meta property="og:site_name" content="QM36&#39;S BLOG">
+<meta property="og:description" content="HTML &amp;lt;!DOCTYPE html&amp;gt;  定义：DOCTYPE标签是一种标准通用标记语言的文档类型声明，它的目的是要告诉标准通用标记语言解析器，它应该使用什么样的文档类型定义（DTD）来解析文档。&amp;lt;!DOCTYPE&amp;gt;声明必须是HTML文档的第一行，位于&amp;lt;html&amp;gt;标签之前 作用：避免浏览器的怪异模式，避免浏览器使用自己的怪异模式解析渲染页面，这样在所有的浏览器">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006XqmrNly1fxnxijbyhxj30gm0asaan.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006XqmrNly1fxqdxngr1uj318w0gktc8.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006XqmrNly1g3cj2tsn2dj316i0qyjyb.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006BuqcWly1fy7ra007dxj30sc0b8tak.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006BuqcWly1fy9th6147tj30qi0xm0yj.jpg">
+<meta property="og:updated_time" content="2019-11-22T04:09:22.521Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端面试知识总结(2019-5-24)">
+<meta name="twitter:description" content="HTML &amp;lt;!DOCTYPE html&amp;gt;  定义：DOCTYPE标签是一种标准通用标记语言的文档类型声明，它的目的是要告诉标准通用标记语言解析器，它应该使用什么样的文档类型定义（DTD）来解析文档。&amp;lt;!DOCTYPE&amp;gt;声明必须是HTML文档的第一行，位于&amp;lt;html&amp;gt;标签之前 作用：避免浏览器的怪异模式，避免浏览器使用自己的怪异模式解析渲染页面，这样在所有的浏览器">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006XqmrNly1fxnxijbyhxj30gm0asaan.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>前端面试知识总结(2019-5-24)</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/QM36">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2019/11/22/移动端调试解决方案/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2019/11/22/WebSocket初学/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://qm36.github.io/2019/11/22/前端面试知识总结/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://qm36.github.io/2019/11/22/前端面试知识总结/&text=前端面试知识总结(2019-5-24)"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://qm36.github.io/2019/11/22/前端面试知识总结/&title=前端面试知识总结(2019-5-24)"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://qm36.github.io/2019/11/22/前端面试知识总结/&is_video=false&description=前端面试知识总结(2019-5-24)"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=前端面试知识总结(2019-5-24)&body=Check out this article: https://qm36.github.io/2019/11/22/前端面试知识总结/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://qm36.github.io/2019/11/22/前端面试知识总结/&title=前端面试知识总结(2019-5-24)"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://qm36.github.io/2019/11/22/前端面试知识总结/&title=前端面试知识总结(2019-5-24)"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://qm36.github.io/2019/11/22/前端面试知识总结/&title=前端面试知识总结(2019-5-24)"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://qm36.github.io/2019/11/22/前端面试知识总结/&title=前端面试知识总结(2019-5-24)"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://qm36.github.io/2019/11/22/前端面试知识总结/&name=前端面试知识总结(2019-5-24)&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML"><span class="toc-number">1.</span> <span class="toc-text"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS"><span class="toc-number">2.</span> <span class="toc-text"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、盒模型"><span class="toc-number">2.0.1.</span> <span class="toc-text"><a href="#&#x4E00;&#x3001;&#x76D2;&#x6A21;&#x578B;" class="headerlink" title="&#x4E00;&#x3001;&#x76D2;&#x6A21;&#x578B;"></a>&#x4E00;&#x3001;&#x76D2;&#x6A21;&#x578B;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、flex布局（弹性盒子布局）"><span class="toc-number">2.0.2.</span> <span class="toc-text"><a href="#&#x4E8C;&#x3001;flex&#x5E03;&#x5C40;&#xFF08;&#x5F39;&#x6027;&#x76D2;&#x5B50;&#x5E03;&#x5C40;&#xFF09;" class="headerlink" title="&#x4E8C;&#x3001;flex&#x5E03;&#x5C40;&#xFF08;&#x5F39;&#x6027;&#x76D2;&#x5B50;&#x5E03;&#x5C40;&#xFF09;"></a>&#x4E8C;&#x3001;flex&#x5E03;&#x5C40;&#xFF08;&#x5F39;&#x6027;&#x76D2;&#x5B50;&#x5E03;&#x5C40;&#xFF09;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、CSS居中"><span class="toc-number">2.0.3.</span> <span class="toc-text"><a href="#&#x4E09;&#x3001;CSS&#x5C45;&#x4E2D;" class="headerlink" title="&#x4E09;&#x3001;CSS&#x5C45;&#x4E2D;"></a>&#x4E09;&#x3001;CSS&#x5C45;&#x4E2D;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四、css其他几种布局方式"><span class="toc-number">2.0.4.</span> <span class="toc-text"><a href="#&#x56DB;&#x3001;css&#x5176;&#x4ED6;&#x51E0;&#x79CD;&#x5E03;&#x5C40;&#x65B9;&#x5F0F;" class="headerlink" title="&#x56DB;&#x3001;css&#x5176;&#x4ED6;&#x51E0;&#x79CD;&#x5E03;&#x5C40;&#x65B9;&#x5F0F;"></a>&#x56DB;&#x3001;css&#x5176;&#x4ED6;&#x51E0;&#x79CD;&#x5E03;&#x5C40;&#x65B9;&#x5F0F;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#五、其他"><span class="toc-number">2.0.5.</span> <span class="toc-text"><a href="#&#x4E94;&#x3001;&#x5176;&#x4ED6;" class="headerlink" title="&#x4E94;&#x3001;&#x5176;&#x4ED6;"></a>&#x4E94;&#x3001;&#x5176;&#x4ED6;</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS"><span class="toc-number">3.</span> <span class="toc-text"><a href="#JS" class="headerlink" title="JS"></a>JS</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、基础知识"><span class="toc-number">3.0.1.</span> <span class="toc-text"><a href="#&#x4E00;&#x3001;&#x57FA;&#x7840;&#x77E5;&#x8BC6;" class="headerlink" title="&#x4E00;&#x3001;&#x57FA;&#x7840;&#x77E5;&#x8BC6;"></a>&#x4E00;&#x3001;&#x57FA;&#x7840;&#x77E5;&#x8BC6;</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue"><span class="toc-number">4.</span> <span class="toc-text"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计网"><span class="toc-number">5.</span> <span class="toc-text"><a href="#&#x8BA1;&#x7F51;" class="headerlink" title="&#x8BA1;&#x7F51;"></a>&#x8BA1;&#x7F51;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、DNS"><span class="toc-number">5.0.1.</span> <span class="toc-text"><a href="#&#x4E00;&#x3001;DNS" class="headerlink" title="&#x4E00;&#x3001;DNS"></a>&#x4E00;&#x3001;DNS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、HTTP"><span class="toc-number">5.0.2.</span> <span class="toc-text"><a href="#&#x4E8C;&#x3001;HTTP" class="headerlink" title="&#x4E8C;&#x3001;HTTP"></a>&#x4E8C;&#x3001;HTTP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、TCP"><span class="toc-number">5.0.3.</span> <span class="toc-text"><a href="#&#x4E09;&#x3001;TCP" class="headerlink" title="&#x4E09;&#x3001;TCP"></a>&#x4E09;&#x3001;TCP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四、cookie和session"><span class="toc-number">5.0.4.</span> <span class="toc-text"><a href="#&#x56DB;&#x3001;cookie&#x548C;session" class="headerlink" title="&#x56DB;&#x3001;cookie&#x548C;session"></a>&#x56DB;&#x3001;cookie&#x548C;session</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#五、缓存的实现方式"><span class="toc-number">5.0.5.</span> <span class="toc-text"><a href="#&#x4E94;&#x3001;&#x7F13;&#x5B58;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;" class="headerlink" title="&#x4E94;&#x3001;&#x7F13;&#x5B58;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;"></a>&#x4E94;&#x3001;&#x7F13;&#x5B58;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#六、浏览器中输入一个url之后会发生什么事情"><span class="toc-number">5.0.6.</span> <span class="toc-text"><a href="#&#x516D;&#x3001;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165;&#x4E00;&#x4E2A;url&#x4E4B;&#x540E;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x4E8B;&#x60C5;" class="headerlink" title="&#x516D;&#x3001;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165;&#x4E00;&#x4E2A;url&#x4E4B;&#x540E;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x4E8B;&#x60C5;"></a>&#x516D;&#x3001;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165;&#x4E00;&#x4E2A;url&#x4E4B;&#x540E;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x4E8B;&#x60C5;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#七、关于跨域"><span class="toc-number">5.0.7.</span> <span class="toc-text"><a href="#&#x4E03;&#x3001;&#x5173;&#x4E8E;&#x8DE8;&#x57DF;" class="headerlink" title="&#x4E03;&#x3001;&#x5173;&#x4E8E;&#x8DE8;&#x57DF;"></a>&#x4E03;&#x3001;&#x5173;&#x4E8E;&#x8DE8;&#x57DF;</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GIT"><span class="toc-number">6.</span> <span class="toc-text"><a href="#GIT" class="headerlink" title="GIT"></a>GIT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题"><span class="toc-number">7.</span> <span class="toc-text"><a href="#&#x95EE;&#x9898;" class="headerlink" title="&#x95EE;&#x9898;"></a>&#x95EE;&#x9898;</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        前端面试知识总结(2019-5-24)
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">QM36'S BLOG</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2019-11-22T04:08:42.875Z" itemprop="datePublished">2019-11-22</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><ol>
+<li><p><code>&lt;!DOCTYPE html&gt;</code></p>
+<ul>
+<li>定义：<code>DOCTYPE</code>标签是一种标准通用标记语言的文档类型声明，它的目的是要告诉标准通用标记语言解析器，它应该使用什么样的文档类型定义（<code>DTD</code>）来解析文档。<code>&lt;!DOCTYPE&gt;</code>声明必须是<code>HTML</code>文档的第一行，位于<code>&lt;html&gt;</code>标签之前</li>
+<li>作用：避免浏览器的怪异模式，避免浏览器使用自己的怪异模式解析渲染页面，这样在所有的浏览器里显示的就都是一个样子了</li>
+</ul>
+</li>
+<li><p><code>HTML5</code>为什么只需要写<code>&lt;!DOCTYPE HTML&gt;</code></p>
+<ul>
+<li><p><code>HTML5</code>不基于<code>SGML</code>，因此不需要对<code>DTD</code>进行引用，但是需要<code>doctype</code>来规范浏览器的行为（让浏览器按照它们应该的方式来运行）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>而HTML4.01</code>基于<code>SGML</code>,所以需要对<code>DTD</code>进行引用，才能告知浏览器文档所使用的文档类型</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>标准模式与兼容模式各有什么区别?</p>
+<ul>
+<li>标准模式的排版和<code>JS</code>运作模式都是以该浏览器支持的最高标准运行。</li>
+<li>在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作</li>
+</ul>
+</li>
+</ol>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h4 id="一、盒模型"><a href="#一、盒模型" class="headerlink" title="一、盒模型"></a>一、盒模型</h4><ol>
+<li>本质就是一个盒子，它包括的内容从内到外依次是：实际内容，内边距，边框，外边距，在<code>chrome</code>中展示如图所示： </li>
+</ol>
+<p><img src="https://ws1.sinaimg.cn/large/006XqmrNly1fxnxijbyhxj30gm0asaan.jpg" alt=""></p>
+<ol>
+<li>当我们设置一个元素的宽高时候，其实设置的是它的实际内容大小，它实际占用的宽高还需要加上内边距，边框，和外边距，如上图所示中的实际宽度为<code>450px</code>(300+50+50+50)</li>
+<li><p>外边距合并（叠加）：两个或多个块级盒子的<strong>垂直</strong>相邻边界会重合，它们的边界宽度是相邻边界宽度中的最大值，发生边距重叠的三种情况：父子元素边距重叠，兄弟元素边距重叠，空元素边距重叠，具体参见博客<a href="https://segmentfault.com/a/1190000012265930" target="_blank" rel="noopener"><br>边距重叠与BFC</a></p>
+<blockquote>
+<p>需要注意的是：只有普通文档流中块框的垂直外边距才会发生外边距合并。行内框、浮动框或绝对定位之间的外边距不会合并，另外水平边距是不会发生重叠的。</p>
+<p> 原因是如果块元素的 margin-top 与它的第一个子元素的margin-top 之间没有 border、padding、inline content、 clearance 来分隔，或者块元素的 margin-bottom 与它的最后一个子元素的margin-bottom 之间没有 border、padding、inline content、height、min-height、 max-height 分隔，那么外边距会塌陷。子元素多余的外边距会被父元素的外边距截断。</p>
+</blockquote>
+</li>
+<li><p>BFC:全称为<code>Block Formatting Context</code>，即块级格式化上下文，用于解决边距重叠的问题。创建<code>BFC</code>的方法：<strong>浮动</strong>（<code>float</code>的值不为<code>none</code>）；<strong>绝对定位元素</strong>（<code>position</code>的值为<code>absolute</code>或<code>fixed</code>）；<strong>行内块</strong>（<code>display</code>为<code>inline-block</code>）；<strong>表格单元</strong>（<code>display</code>为<code>table</code>、<code>table-cell</code>、<code>table-caption</code>等<code>HTML</code>表格相关属性）；<strong>弹性盒</strong>（<code>display</code>为<code>flex</code>或<code>inline-flex</code>）；<code>overflow</code>不为<code>visible</code>；</p>
+</li>
+<li><code>css reset</code>：用于改写<code>HTML</code>标签的默认样式。有些HTML标签在浏览器里有默认的样式，例如<code>p</code>标签有上下边距，<code>li</code>标签有列表标识符号等。这些默认样式在不同浏览器之间也会有差别。这必然会带来浏览器兼容问题。因此，可以使用<code>CSS</code>代码去掉这些默认样式，从而覆盖浏览器的CSS默认属性。</li>
+<li><p><code>box-sizing</code>：它有如下几种属性</p>
+<ul>
+<li><code>content-box</code> ，默认值，可以使设置的宽度和高度值应用到元素的内容框。盒子的<code>width</code>只包含内容</li>
+<li><code>border-box</code>, 设置的<code>width</code>值其实是除<code>margin</code>外的<code>border+padding+element</code>的总宽度</li>
+<li><code>inherit</code>, 规定应从父元素继承<code>box-sizing</code>属性的值</li>
+<li>全局设置<code>border-box</code>很好，首先它符合直觉，其次它可以省去一次又一次的加加减减，而且让有边框的盒子正常使用百分比宽度</li>
+</ul>
+</li>
+<li><p>另外补充用<code>div</code>画三角形</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">   <span class="selector-class">.triangle</span> &#123;</span></span><br><span class="line"><span class="undefined">        width : 0;</span></span><br><span class="line"><span class="undefined">        height: 0;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">border</span> : 100<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-tag">transparent</span>;<span class="comment">/*设置border为透明*/</span></span></span><br><span class="line"><span class="undefined">        border-top : 100px solid blue; </span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="二、flex布局（弹性盒子布局）"><a href="#二、flex布局（弹性盒子布局）" class="headerlink" title="二、flex布局（弹性盒子布局）"></a>二、flex布局（弹性盒子布局）</h4><ol>
+<li>布局的传统解决方案是：<code>display</code>（设置行内\块级属性或flex布局），<code>position</code>（设置绝对定位，相对定位或默认定位）和<code>float</code>（浮动）属性</li>
+<li><code>flex</code>布局是什么：任何容器都可以指定为<code>flex</code>布局，行内元素也可以，但是设为<code>flex</code>布局之后，子元素的<code>float</code>,<code>clear</code>,<code>vertical-align</code>属性将失效</li>
+<li>基本概念：在<code>flex</code>布局中，分为容器和容器中的项目，容器默认存在两根轴，水平的主轴<code>main axis</code>,和垂直的交叉轴<code>cross axis</code>。描述单个项目占据的大小的参数：<code>main size</code>和<code>cross size</code></li>
+<li><p>容器的属性：</p>
+<ul>
+<li><p>flex-direction:描述项目子元素的垂直分布或水平分布</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.box</span> &#123;</span></span><br><span class="line"><span class="undefined">  flex-direction: row | row-reverse | column | column-reverse;/*水平|反向水平|垂直|反向垂直*/</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>flex-wrap：描述子元素是否换行</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.box</span> &#123;</span></span><br><span class="line"><span class="undefined">  flex-wrap: nowrap | wrap | wrap-reverse;/*不换行|换行|反向换行*/</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：如果不换行，有可能造成子元素原有的宽度发生变化，在换行或反向换行时，子元素的宽度为设置的值</p>
+</blockquote>
+</li>
+<li><p>flex-flow：是<code>flex-direction</code>属性和<code>flex-wrap</code>属性的简写形式，默认值为<code>row nowrap</code></p>
+</li>
+<li><p>justify-content: 描述子元素在水平方向的对齐方式</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.box</span> &#123;</span></span><br><span class="line"><span class="undefined">  justify-content: flex-start | flex-end | center | space-between | space-around;/*左对齐|右对齐|居中|两端对齐项目等距|项目两侧间隔相等*/</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>align-items：描述子元素在垂直方向的对齐方式</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.box</span> &#123;</span></span><br><span class="line"><span class="undefined">  align-items: flex-start | flex-end | center | baseline | stretch;/*上对齐|下对齐|居中|第一行文字对齐|未设置高度时充满容器*/</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>align-content：描述多根水平轴线在交叉轴方向的对齐方式。只有一根轴线不起作用。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.box</span> &#123;</span></span><br><span class="line"><span class="undefined">  align-content: flex-start | flex-end | center | space-between | space-around |stretch;/*同水平方式*/</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>项目的属性</p>
+<ul>
+<li><p>order:描述项目的排列顺序，数值越小，越靠前，默认为<code>0</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.item</span> &#123;</span></span><br><span class="line"><span class="xml">  order: <span class="tag">&lt;<span class="name">integer</span>&gt;</span>;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>flex-grow:定义项目的放大比例，默认为<code>0</code>(即使有剩余空间也不放大)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.item</span> &#123;</span></span><br><span class="line"><span class="xml">  flex-grow: <span class="tag">&lt;<span class="name">number</span>&gt;</span>; </span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>flex-shrink：定义项目的缩小比例，默认为<code>1</code>（即使空间不足也不会缩小）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.item</span> &#123;</span></span><br><span class="line"><span class="xml">  flex-shrink: <span class="tag">&lt;<span class="name">number</span>&gt;</span>; </span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>flex-basis：定义在分配剩余空间之前，项目占据的主轴空间（<code>main size</code>），默认值是项目本来的大小，它可以设为跟<code>width</code>或<code>height</code>属性一样的值</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.item</span> &#123;</span></span><br><span class="line"><span class="xml">  flex-basis: <span class="tag">&lt;<span class="name">length</span>&gt;</span>; </span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>flex:是<code>flex-grow</code>,<code>flex-shrink</code>,<code>flex-basis</code>的简写，默认值是<code>0 1 auto</code></p>
+</li>
+<li><p>align-self:允许单个项目与其他项目不同的垂直方向的对齐方式，可以覆盖<code>align-items</code>属性，默认值为<code>auto</code>，表示继承父元素的<code>align-items</code>属性，如果没有父元素，则等同于<code>stretch</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.item</span> &#123;</span></span><br><span class="line"><span class="undefined">  align-self: auto | flex-start | flex-end | center | baseline | stretch;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>flex布局实战：<a href="https://github.com/QM36/JS-test/blob/master/flex.html" target="_blank" rel="noopener">利用flex布局写的筛子</a></p>
+</li>
+</ol>
+<h4 id="三、CSS居中"><a href="#三、CSS居中" class="headerlink" title="三、CSS居中"></a>三、CSS居中</h4><ol>
+<li>块级元素与行内元素：<code>h1</code>,<code>div</code>,<code>p</code>,<code>table</code>，表单，列表，行内元素有<code>a</code>,<code>img</code>,<code>input</code>,<code>lable</code>,块级元素与行内元素转换用<code>display</code>属性，块级元素设为<code>block</code>,行内元素设为<code>inline</code>。由于行内元素无法设置宽高，因此，如果想要既是行内元素又能设置宽高可以将<code>display</code>值设为<code>inline-block</code></li>
+<li><p>块级元素水平居中：</p>
+<ul>
+<li><p>设置外边距</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.box</span> &#123;</span></span><br><span class="line"><span class="undefined">    margin: 0 auto;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>绝对定位+负边距(父元素position非static)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.box</span> &#123;</span></span><br><span class="line"><span class="undefined">    position: absolute;   </span></span><br><span class="line"><span class="css">    <span class="selector-tag">left</span><span class="selector-pseudo">:50</span>%;             </span></span><br><span class="line"><span class="css">    <span class="selector-tag">margin-left</span>: <span class="selector-tag">-50px</span>; <span class="comment">/*这里的值是这个元素的宽度的一半*/</span></span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>弹性盒子布局（具体参考第二部分）</p>
+</li>
+</ul>
+</li>
+<li><p>块级元素垂直居中</p>
+<ul>
+<li><p>绝对定位+负边距(父元素position非static)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.box</span> &#123;</span></span><br><span class="line"><span class="undefined">    position: absolute;</span></span><br><span class="line"><span class="undefined">    top: 50%; </span></span><br><span class="line"><span class="css">    <span class="selector-tag">margin-top</span>: <span class="selector-tag">-175px</span>; <span class="comment">/*这里的值是元素高度的一半*/</span></span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>绝对定位+父元素position非static+子元素transform</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.outside</span> &#123;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">position</span>: <span class="selector-tag">relative</span>;              <span class="comment">/*父元素非static*/</span></span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.inner</span> &#123;</span></span><br><span class="line"><span class="undefined">    position: absolute;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">top</span><span class="selector-pseudo">:50</span>%;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">transform</span>: <span class="selector-tag">translateY</span>(<span class="selector-tag">-50</span>%);    <span class="comment">/*相对于自身高度，向上移动50%*/</span></span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>弹性盒子布局（具体见第二部分）</p>
+</li>
+</ul>
+</li>
+<li><p>行内元素居中：</p>
+<ul>
+<li><code>vertical-align</code>:用于图片相对于文字的中心轴线居中</li>
+<li><code>text-align</code>:仅用于文本的水平居中</li>
+<li><code>line-height</code>: 可用于文本的垂直居中，这个属性描述的是行高，把一段文本的<code>line-height</code>设为父元素的高度就可以垂直居中</li>
+<li>图片在一个div中的居中可以用到绝对定位居中和弹性盒子居中，垂直水平都可以，用法同块级元素</li>
+</ul>
+</li>
+<li><p>关于<code>position</code></p>
+<p> <img src="https://ws1.sinaimg.cn/large/006XqmrNly1fxqdxngr1uj318w0gktc8.jpg" alt=""><br> 其中有几点需要注意：</p>
+<ul>
+<li>默认值是<code>static</code>这个时候，如果其子元素想利用外边距取负值的方法居中的时候，就不会达到想要的效果，这个时候需要个想要居中的元素的父元素<code>position</code>赋值为非<code>static</code>即可</li>
+<li>当一个元素有属性<code>z-index</code>时候，另外需要给它的<code>position</code>赋值为<code>absolute</code></li>
+</ul>
+</li>
+</ol>
+<h4 id="四、css其他几种布局方式"><a href="#四、css其他几种布局方式" class="headerlink" title="四、css其他几种布局方式"></a>四、css其他几种布局方式</h4><ol>
+<li>栅格布局（百分比）</li>
+<li>格子布局（grid）见<a href="https://github.com/QM36/JS-test/blob/master/grid.html" target="_blank" rel="noopener">实战基本网格平均布局</a>(适配手机)</li>
+<li>圣杯布局</li>
+<li>响应式布局：可以运用以上布局方式进行响应式布局</li>
+</ol>
+<h4 id="五、其他"><a href="#五、其他" class="headerlink" title="五、其他"></a>五、其他</h4><ol>
+<li>px,em,rem的区别？具体见<a href="http://www.runoob.com/w3cnote/px-em-rem-different.html" target="_blank" rel="noopener">菜鸟教程</a></li>
+</ol>
+<h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><h4 id="一、基础知识"><a href="#一、基础知识" class="headerlink" title="一、基础知识"></a>一、基础知识</h4><ol>
+<li>JS中的数据类型：js数据类型分为基本类型和引用类型，两者最主要的区别在于复制方面，前者是直接深复制，后者是类指针的引用类型，即浅复制。基本类型有<code>null</code>,<code>undefine</code>,<code>number</code>,<code>string</code>,<code>boolean</code>,<code>symbol</code>，引用类型<code>object</code>，具体细分有<code>Array</code>,<code>Date</code>,<code>RegExp</code>,<code>Function</code>等等，比较特殊的一点就是还存在基本包装类型(因为他们还是遵循浅复制的原则)，他们既是基本类型，但是又存在类似引用的方法。<ul>
+<li>null：表示一个空对象指针</li>
+<li>undefined: 未初始化的变量</li>
+<li>number：包括<code>NaN</code>,需要掌握数值转换的几种方法：<code>Number()</code>,<code>parseInt()</code>,<code>parseFloat()</code></li>
+<li>string: 需要掌握转换字符串方法<code>toString()</code></li>
+<li>boolean:只有两个字面值<code>true</code>和<code>false</code>,其他所有类型的值都与这两个<code>boolean</code>等价，需要调用转型函数<code>Bollean()</code>,需要注意的是各种数据类型对应的转换规则</li>
+<li>symbol：直接使用<code>Symbol()</code>创建新的<code>symbol</code>类型，并用一个可选的字符串作为其描述，注意字符串相同的两个变量不是全等的</li>
+</ul>
+</li>
+<li><p>类型判断的几种方法</p>
+<ul>
+<li><p>typeof操作符</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> message = <span class="string">"some string"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> message);<span class="comment">//"string"</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span>(message));<span class="comment">//"string"</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="number">95</span>);<span class="comment">//"number"</span></span><br></pre></td></tr></table></figure>
+<p>数据类型 | typeof返回值<br>—|—<br>字符串、””、’’ | string<br><strong>对象、null、数组、正则表达式、日期</strong> | <strong>object</strong><br>函数 | function<br>布尔值 | boolean<br>数值 | number<br>未定义变量 | undefined</p>
+</li>
+<li><p>Array.isArray()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">Array</span>.isArray(value))&#123; <span class="comment">//对数组执行某些操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Object.prototype.toString.call(value):传入参数是需要检测的目标，返回值是<code>[object type]</code>,其中<code>type</code>取值可以是<code>null</code>、<code>string</code>、<code>boolean</code>、<code>number</code>、<code>undefined</code>、<code>array</code>、<code>function</code>、<code>object</code>、<code>date</code>、<code>math</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> message = <span class="string">"some string"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(message));<span class="comment">//[object String]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>其他检测函数或操作符</p>
+<ul>
+<li>hasOwnProperty(propertyName)：用于检查给定的属性在当前对象实例中(而不是在实例 的原型中)是否存在，参数以字符串传入，返回布尔值</li>
+<li>isPrototypeOf(object)：用于检查传入的对象的原型对象是否是调用该函数的对象，返回值为布尔值</li>
+<li><p>instanceof 操作符：测试实例与原型链中出现过得构造函数，结果返回布尔值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.isPrototypeOf(instance));<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(SuperType.prototype.isPrototypeOf(instance));<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(SubType.prototype.isPrototypeOf(instance));<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(instance <span class="keyword">instanceof</span> <span class="built_in">Object</span>);<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(instance <span class="keyword">instanceof</span> SuperType);<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(instance <span class="keyword">instanceof</span> SubType);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>关于数组：</p>
+<ul>
+<li><p>数组-&gt;字符串</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>];</span><br><span class="line"><span class="built_in">console</span>.log(colors.toString());<span class="comment">//red,blue,green</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组-&gt;特殊间隔的字符串</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"green"</span>, <span class="string">"blue"</span>];</span><br><span class="line"><span class="built_in">console</span>.log(colors.join(<span class="string">","</span>));       <span class="comment">//red,green,blue</span></span><br><span class="line"><span class="built_in">console</span>.log(colors.join(<span class="string">"||"</span>));      <span class="comment">//red||green||blue</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串-&gt;数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colorText = <span class="string">"red,blue,green,yellow"</span>;</span><br><span class="line"><span class="keyword">var</span> colors1 = colorText.split(<span class="string">","</span>);<span class="comment">//["red", "blue", "green", "yellow"]</span></span><br><span class="line"><span class="keyword">var</span> colors2 = colorText.split(<span class="string">","</span>, <span class="number">2</span>);<span class="comment">//["red", "blue"]</span></span><br><span class="line"><span class="keyword">var</span> colors3 = colorText.split(<span class="regexp">/[^\,]+/</span>);<span class="comment">//["", ",", ",", ",", ""]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组的栈方法（对数组的末位置操作）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line"><span class="keyword">var</span> count = colors.push(<span class="string">"red"</span>, <span class="string">"green"</span>); </span><br><span class="line"><span class="built_in">console</span>.log(count); <span class="comment">//2</span></span><br><span class="line"><span class="built_in">console</span>.log(colors);<span class="comment">//[ 'red', 'green' ]</span></span><br><span class="line">count = colors.push(<span class="string">"black"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(count);     <span class="comment">//3</span></span><br><span class="line"><span class="built_in">console</span>.log(colors);<span class="comment">//[ 'red', 'green', 'black' ]</span></span><br><span class="line"><span class="keyword">var</span> item = colors.pop();</span><br><span class="line"><span class="built_in">console</span>.log(item);      <span class="comment">//"black"</span></span><br><span class="line"><span class="built_in">console</span>.log(colors.length);   <span class="comment">//2</span></span><br><span class="line"><span class="built_in">console</span>.log(colors);<span class="comment">//[ 'red', 'green' ]</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>push向数组末尾增加值，返回值是修改后的数组的length，pop取出数组末尾的值，返回值是移除的项</p>
+</blockquote>
+</li>
+<li><p>数组的队列方法（对数组的首位置进行操作）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="built_in">console</span>.log(arr.shift());<span class="comment">//1</span></span><br><span class="line"><span class="built_in">console</span>.log(arr.length);<span class="comment">//4</span></span><br><span class="line"><span class="built_in">console</span>.log(arr.unshift(<span class="number">6</span>,<span class="number">7</span>));<span class="comment">//6</span></span><br><span class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[ 6, 7, 2, 3, 4, 5 ]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组重排序</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//reverse</span></span><br><span class="line"><span class="keyword">var</span> values = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">values.reverse();</span><br><span class="line"><span class="built_in">console</span>.log(values);<span class="comment">//5, 4, 3, 2, 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//sort需要传入比较函数</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">18</span>, <span class="number">12</span>, <span class="number">23</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">26</span>];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span> (<span class="params">num1, num2</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> num1 - num2;</span><br><span class="line">&#125;</span><br><span class="line">arr.sort(compare);</span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">//[ 4, 5, 12, 18, 23, 26 ]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>连接数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"green"</span>, <span class="string">"blue"</span>];</span><br><span class="line"><span class="keyword">var</span> colors2 = colors.concat(<span class="string">"yellow"</span>, [<span class="string">"black"</span>, <span class="string">"brown"</span>]);</span><br><span class="line"><span class="built_in">console</span>.log(colors);     <span class="comment">//[ 'red', 'green', 'blue' ]</span></span><br><span class="line"><span class="built_in">console</span>.log(colors2);    <span class="comment">//[ 'red', 'green', 'blue', 'yellow', 'black', 'brown' ]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除数组中某些项(同字符串)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"green"</span>, <span class="string">"blue"</span>, <span class="string">"yellow"</span>, <span class="string">"purple"</span>];</span><br><span class="line"><span class="keyword">var</span> colors2 = colors.slice(<span class="number">1</span>); <span class="comment">//start</span></span><br><span class="line"><span class="keyword">var</span> colors3 = colors.slice(<span class="number">1</span>,<span class="number">4</span>); <span class="comment">// start end</span></span><br><span class="line"><span class="built_in">console</span>.log(colors2);   <span class="comment">//[ 'green', 'blue', 'yellow', 'purple' ]</span></span><br><span class="line"><span class="built_in">console</span>.log(colors3);   <span class="comment">//[ 'green', 'blue', 'yellow' ]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组的删除插入和替换</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"green"</span>, <span class="string">"blue"</span>];</span><br><span class="line"><span class="keyword">var</span> removed = colors.splice(<span class="number">0</span>,<span class="number">1</span>); </span><br><span class="line"><span class="built_in">console</span>.log(colors);<span class="comment">//[ 'green', 'blue' ]</span></span><br><span class="line"><span class="built_in">console</span>.log(removed); <span class="comment">//[ 'red' ]</span></span><br><span class="line"></span><br><span class="line">removed = colors.splice(<span class="number">1</span>, <span class="number">0</span>, <span class="string">"yellow"</span>, <span class="string">"orange"</span>); <span class="built_in">console</span>.log(colors); <span class="comment">//[ 'green', 'yellow', 'orange', 'blue' ]</span></span><br><span class="line"><span class="built_in">console</span>.log(removed); <span class="comment">//[]</span></span><br><span class="line"></span><br><span class="line">removed = colors.splice(<span class="number">1</span>, <span class="number">1</span>, <span class="string">"red"</span>, <span class="string">"purple"</span>); </span><br><span class="line"><span class="built_in">console</span>.log(colors); <span class="comment">//[ 'green', 'red', 'purple', 'orange', 'blue' ]</span></span><br><span class="line"><span class="built_in">console</span>.log(removed);<span class="comment">//[ 'yellow' ]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>原型链与继承</p>
+<ul>
+<li><p>原型</p>
+<blockquote>
+<p>原型就是包含特定类型的所有实例共享的方法和属性的对象。任何一个构造函数，不管是自定义的还是<code>js</code>已有的，他们都带有一个名为<code>prototype</code>的属性，这个属性指向这种特定类型的原型对象，而这个原型对象又包含一个名为<code>constructor</code>的属性，这个属性指向这种类型的构造函数。构造函数的实例对象也有一个指针指向原型对象名为<code>[[prototype]]</code>，可以用<code>Object.getPrototypeOf(obj)</code>获取</p>
+</blockquote>
+</li>
+<li><p>原型链</p>
+<blockquote>
+<p>即便自定义类型的构造函数有一个原型对象，但是终究还是指向<code>js</code>本就有的类型，比如<code>Object</code>或<code>Function</code>。这就是因为原型链的存在，因为某个特定类型的原型对象其实是另一个类型的实例，如此层层递进，就构成了实例与原型的链条⛓</p>
+</blockquote>
+</li>
+<li><p>继承</p>
+<blockquote>
+<p>由于原型链的存在，实例对象，可以继承到原型链上所有的属性和方法，但是不能忘记，所有的引用类型都继承了<code>Object</code>，而这个继承也是通过原型链实现的，所以默认的原型都会包含一个内部指针指向<code>Object.prototype</code>。还有一点需要注意除了<code>Object.prototype</code>和<code>SuperType.prototype</code>其他类型的原型都没有<code>constructor</code>属性</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/006XqmrNly1g3cj2tsn2dj316i0qyjyb.jpg" alt=""></p>
+<ol>
+<li><p>闭包</p>
+<ul>
+<li><p>解释</p>
+<blockquote>
+<p>闭包是指有权访问另一个函数作用域中的变量的函数。创建闭包的常见方式就是在一个函数内部创建另一个函数。内部函数可以在外部函数的参数部分，函数体部分以及返回值部分</p>
+</blockquote>
+</li>
+<li><p>示例</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createcompare</span> (<span class="params">propertyName</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">obj1, obj2</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">var</span> value1 = obj1[propertyName];</span><br><span class="line">		<span class="keyword">var</span> value2 = obj2[propertyName];</span><br><span class="line">		<span class="keyword">if</span> (value1 &lt; value2) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (value1 &gt; value2) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> compare = createcompare(<span class="string">"age"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(compare(&#123;<span class="string">"age"</span> : <span class="number">2</span>&#125; , &#123;<span class="string">"age"</span> : <span class="number">3</span>&#125;));</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>实例：<br>见<a href="https://blog.csdn.net/m_review/article/details/80041601" target="_blank" rel="noopener">博客</a></p>
+</li>
+<li>应用场景：迭代器，将变量存在内存中，与垃圾回收机制，内存销毁有关</li>
+</ul>
+</li>
+<li><p>call、apply与bind</p>
+<ul>
+<li>call与apply都是改变函数体内的<code>this</code>指向，用于在特定作用域调用函数。两者最明显的区别就是对于<code>call</code>函数而言，第一个参数是<code>this</code>,其余参数都是直接传给函数，而<code>apply</code>第一个参数仍然是<code>this</code>，但是其余参数以数组形式或<code>arguments</code>传递。<code>bind</code>方法创建一个新的函数，在调用时设置<code>this</code>关键字为提供的值。并在调用新函数时，将给定参数列表作为原函数的参数序列的前若干项</li>
+<li><p>示例</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1, num2</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">callSum1</span>(<span class="params">num1, num2</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> sum.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">callSum2</span>(<span class="params">num1, num2</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> sum.apply(<span class="keyword">this</span>, [num1, num2]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">callSum3</span>(<span class="params">num1, num2</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> sum.call(<span class="keyword">this</span>, num1, num2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(callSum1(<span class="number">10</span>,<span class="number">10</span>));   <span class="comment">//20</span></span><br><span class="line"><span class="built_in">console</span>.log(callSum2(<span class="number">10</span>,<span class="number">10</span>));   <span class="comment">//20</span></span><br><span class="line"><span class="built_in">console</span>.log(callSum3(<span class="number">10</span>,<span class="number">10</span>));   <span class="comment">//20</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<pre><code><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">module</span> = &#123;</span><br><span class="line">  x: <span class="number">42</span>,</span><br><span class="line">  getX: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.x;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> unboundGetX = <span class="built_in">module</span>.getX;</span><br><span class="line"><span class="built_in">console</span>.log(unboundGetX()); <span class="comment">// The function gets invoked at the global scope</span></span><br><span class="line"><span class="comment">// expected output: undefined</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> boundGetX = unboundGetX.bind(<span class="built_in">module</span>);</span><br><span class="line"><span class="built_in">console</span>.log(boundGetX());</span><br><span class="line"><span class="comment">// expected output: 42</span></span><br></pre></td></tr></table></figure>
+</code></pre><ol>
+<li><p>箭头函数</p>
+<ul>
+<li>作用：更简短的函数，并且不用绑定<code>this</code></li>
+<li><p>简短函数示例</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">var</span> newarr = arr.map( <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">	 <span class="keyword">return</span> element += <span class="number">1</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">var</span> newarr1 = arr.map(<span class="function">(<span class="params">element</span>) =&gt;</span> &#123; <span class="keyword">return</span> element += <span class="number">1</span>&#125;)</span><br><span class="line"><span class="keyword">var</span> newarr2 = arr.map(<span class="function">(<span class="params">element</span>) =&gt;</span> element += <span class="number">1</span>)</span><br><span class="line"><span class="built_in">console</span>.log(newarr);<span class="comment">//[ 2, 3, 4, 5 ]</span></span><br><span class="line"><span class="built_in">console</span>.log(newarr1);<span class="comment">//[ 2, 3, 4, 5 ]</span></span><br><span class="line"><span class="built_in">console</span>.log(newarr2);<span class="comment">//[ 2, 3, 4, 5 ]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<pre><code>* 不绑定this示例
+
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">var</span> newarr = arr.map( <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">	 <span class="keyword">return</span> element += <span class="number">1</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">var</span> newarr1 = arr.map(<span class="function">(<span class="params">element</span>) =&gt;</span> &#123; <span class="keyword">return</span> element += <span class="number">1</span>&#125;)</span><br><span class="line"><span class="keyword">var</span> newarr2 = arr.map(<span class="function">(<span class="params">element</span>) =&gt;</span> element += <span class="number">1</span>)</span><br><span class="line"><span class="built_in">console</span>.log(newarr);<span class="comment">//[ 2, 3, 4, 5 ]</span></span><br><span class="line"><span class="built_in">console</span>.log(newarr1);<span class="comment">//[ 2, 3, 4, 5 ]</span></span><br><span class="line"><span class="built_in">console</span>.log(newarr2);<span class="comment">//[ 2, 3, 4, 5 ]</span></span><br></pre></td></tr></table></figure>
+</code></pre><ol>
+<li>关于this<ul>
+<li>在严格模式下<code>this</code>为<code>undefined</code>，在普通模式下<code>this</code>指向<code>window</code></li>
+<li>对象方法调用用<code>this</code>指向调用调用对象</li>
+<li><code>call</code>和<code>apply</code>可以显示绑定<code>this</code>指向</li>
+<li>在箭头函数中，<code>this</code>指向外层作用域的<code>this</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><h2 id="计网"><a href="#计网" class="headerlink" title="计网"></a>计网</h2><h4 id="一、DNS"><a href="#一、DNS" class="headerlink" title="一、DNS"></a>一、DNS</h4><ol>
+<li>概述<ul>
+<li><code>DNS</code>是互联网的一项服务，它作为将域名和<code>IP</code>相互映射的一个分布式数据库，使用户更方便得访问互联网</li>
+<li>由解析器和域名器组成</li>
+<li><code>DNS</code>协议属于应用层协议，主要为其他应用协议服务，而不是直接面向用户。</li>
+</ul>
+</li>
+<li>dns系统的层次结构：根域 &gt; 顶级域（一级域）&gt; 二级域等等如下图所示：</li>
+</ol>
+<p><img src="https://ws1.sinaimg.cn/large/006BuqcWly1fy7ra007dxj30sc0b8tak.jpg" alt=""></p>
+<ol>
+<li>域名服务器：能提供域名解析的服务器，分为顶级域名服务器、权威域名服务器、本地域名服务器。域名服务器上记录的类型可以是<code>A</code>,<code>NS</code>,<code>MX</code>,<code>CNAME</code></li>
+</ol>
+<blockquote>
+<p>需要注意的是，本地域名服务器不属于服务器的层次结构，每个ISP都有一个本地DNS服务器，当主机发出DNS请求时，该请求被发往本地DNS服务器。它起着代理的作用，转发请求到层次结构中。</p>
+</blockquote>
+<pre><code>* A：`address`，用户可以在这里设置子域名并指向自己目标主机上，从而通过域名找到服务器，还可以实现：泛域名解析（将该域名的子域名都指向同一个空间）、负载均衡（当相同子域名有多个目标地址时，表示轮询，可以达到负载均衡的目的，但需要虚拟主机服务商支持）
+* CNAME:别名指向可以为一个主机设置别名。目标主机地址只能使用主机名，不能使用`IP`地址。`A`是优先于`CNAME`的
+* MX:邮件交换记录，用于将以该域名为结尾的电子邮件指向对应的邮件服务器进行处理
+* NS:记录从哪个`dns`服务器可以获得某个域的`dns`记录，即用于记录查询链
+</code></pre><ol>
+<li>dns提供的服务：映射域名与<code>IP</code>地址，并提供别名；为邮件服务器提供别名；负载分配（一个域名多个<code>IP</code>的时候）</li>
+<li>dns域名解析过程<ul>
+<li>dns正向解析：分为递归查询（主机向本地服务器的查询，由请求的服务器直接返回权威答案）和迭代查询（由本地服务器逐步向各层服务器的查询过程）</li>
+<li>dns反向解析：在域名系统中，一个<code>IP</code>地址可以对应多个域名，因此从<code>IP</code>出发去找域名，理论上应该遍历整个域名树，但是在<code>Internet</code>中不是这样实现的。为了完成逆向域名解析，系统提供一个特别域，该特别域成为逆向解析域<code>in-addr.arpa</code>。这样欲解析的<code>IP</code>地址就会被表达成一种像域名一样的可显示串形式，后缀以逆向解析域域名<code>in-addr.arpa</code>结尾</li>
+<li>dns缓存：先在本地缓存中查找若没有，查找<code>hosts</code>文件，若还是没有，则像<code>ns</code>服务器发出请求，查询<code>ns</code>的缓存。缓存时间<code>TTL</code>是对象的服务器定义的</li>
+</ul>
+</li>
+<li><p>dns记录与报文：</p>
+<ul>
+<li>dns记录由四个部分组成：<code>type</code>（标志这是一条什么记录），<code>value</code>（<code>Name</code>的对应值），<code>Name</code>（<code>Value</code>的对应值），<code>TTL</code>（本记录应该在缓存中呆多久）</li>
+<li><p>dns报文：如下图所示</p>
+<p><img src="https://ws1.sinaimg.cn/large/006BuqcWly1fy9th6147tj30qi0xm0yj.jpg" alt=""></p>
+</li>
+</ul>
+</li>
+<li>dns的安全性：dns大多数情况下是安全的<ul>
+<li>对于<code>DDos</code>攻击，dns有包过滤系统和缓存服务，仅在<code>DDos</code>攻击指向顶级服务器的时候稍微有些困扰</li>
+<li>可以被中间人攻击（伪造回答哄骗客户主机）和dns毒害攻击（伪造回答哄骗下一级dns服务器来缓存，从而欺骗客户主机）但是技术上很难实现</li>
+<li>dns服务器本身可被利用与攻击其他服务器，但是至今只是个例</li>
+</ul>
+</li>
+</ol>
+<h4 id="二、HTTP"><a href="#二、HTTP" class="headerlink" title="二、HTTP"></a>二、HTTP</h4><ol>
+<li>一些web术语和基本概念、约定：web文档是由对象组成的，一个对象就是一个文件，对象一般由<code>url</code>定位。<code>url</code>由两部分组成，一部分是主机名，另一部分是对象的路径名</li>
+<li>概况：<code>http</code>一般使用<code>tcp</code>作为传输层协议（但<code>http</code>协议中并没有规定必须使用它说）</li>
+</ol>
+<h4 id="三、TCP"><a href="#三、TCP" class="headerlink" title="三、TCP"></a>三、TCP</h4><h4 id="四、cookie和session"><a href="#四、cookie和session" class="headerlink" title="四、cookie和session"></a>四、cookie和session</h4><h4 id="五、缓存的实现方式"><a href="#五、缓存的实现方式" class="headerlink" title="五、缓存的实现方式"></a>五、缓存的实现方式</h4><h4 id="六、浏览器中输入一个url之后会发生什么事情"><a href="#六、浏览器中输入一个url之后会发生什么事情" class="headerlink" title="六、浏览器中输入一个url之后会发生什么事情"></a>六、浏览器中输入一个url之后会发生什么事情</h4><p>具体见博客<a href="http://qm36mmz.xyz/2018/11/26/SAP%E9%9D%A2%E8%AF%95/" target="_blank" rel="noopener">SAP电话面试总结问题四</a></p>
+<h4 id="七、关于跨域"><a href="#七、关于跨域" class="headerlink" title="七、关于跨域"></a>七、关于跨域</h4><h2 id="GIT"><a href="#GIT" class="headerlink" title="GIT"></a>GIT</h2><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ol>
+<li>闭包就是内部函数可以访问外部函数参数吗？那不一定非要放在返回值里面啊，放在函数体里面也可以啊，那放在参数里面可以吗</li>
+</ol>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/QM36">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML"><span class="toc-number">1.</span> <span class="toc-text"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS"><span class="toc-number">2.</span> <span class="toc-text"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、盒模型"><span class="toc-number">2.0.1.</span> <span class="toc-text"><a href="#&#x4E00;&#x3001;&#x76D2;&#x6A21;&#x578B;" class="headerlink" title="&#x4E00;&#x3001;&#x76D2;&#x6A21;&#x578B;"></a>&#x4E00;&#x3001;&#x76D2;&#x6A21;&#x578B;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、flex布局（弹性盒子布局）"><span class="toc-number">2.0.2.</span> <span class="toc-text"><a href="#&#x4E8C;&#x3001;flex&#x5E03;&#x5C40;&#xFF08;&#x5F39;&#x6027;&#x76D2;&#x5B50;&#x5E03;&#x5C40;&#xFF09;" class="headerlink" title="&#x4E8C;&#x3001;flex&#x5E03;&#x5C40;&#xFF08;&#x5F39;&#x6027;&#x76D2;&#x5B50;&#x5E03;&#x5C40;&#xFF09;"></a>&#x4E8C;&#x3001;flex&#x5E03;&#x5C40;&#xFF08;&#x5F39;&#x6027;&#x76D2;&#x5B50;&#x5E03;&#x5C40;&#xFF09;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、CSS居中"><span class="toc-number">2.0.3.</span> <span class="toc-text"><a href="#&#x4E09;&#x3001;CSS&#x5C45;&#x4E2D;" class="headerlink" title="&#x4E09;&#x3001;CSS&#x5C45;&#x4E2D;"></a>&#x4E09;&#x3001;CSS&#x5C45;&#x4E2D;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四、css其他几种布局方式"><span class="toc-number">2.0.4.</span> <span class="toc-text"><a href="#&#x56DB;&#x3001;css&#x5176;&#x4ED6;&#x51E0;&#x79CD;&#x5E03;&#x5C40;&#x65B9;&#x5F0F;" class="headerlink" title="&#x56DB;&#x3001;css&#x5176;&#x4ED6;&#x51E0;&#x79CD;&#x5E03;&#x5C40;&#x65B9;&#x5F0F;"></a>&#x56DB;&#x3001;css&#x5176;&#x4ED6;&#x51E0;&#x79CD;&#x5E03;&#x5C40;&#x65B9;&#x5F0F;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#五、其他"><span class="toc-number">2.0.5.</span> <span class="toc-text"><a href="#&#x4E94;&#x3001;&#x5176;&#x4ED6;" class="headerlink" title="&#x4E94;&#x3001;&#x5176;&#x4ED6;"></a>&#x4E94;&#x3001;&#x5176;&#x4ED6;</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS"><span class="toc-number">3.</span> <span class="toc-text"><a href="#JS" class="headerlink" title="JS"></a>JS</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、基础知识"><span class="toc-number">3.0.1.</span> <span class="toc-text"><a href="#&#x4E00;&#x3001;&#x57FA;&#x7840;&#x77E5;&#x8BC6;" class="headerlink" title="&#x4E00;&#x3001;&#x57FA;&#x7840;&#x77E5;&#x8BC6;"></a>&#x4E00;&#x3001;&#x57FA;&#x7840;&#x77E5;&#x8BC6;</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue"><span class="toc-number">4.</span> <span class="toc-text"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计网"><span class="toc-number">5.</span> <span class="toc-text"><a href="#&#x8BA1;&#x7F51;" class="headerlink" title="&#x8BA1;&#x7F51;"></a>&#x8BA1;&#x7F51;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、DNS"><span class="toc-number">5.0.1.</span> <span class="toc-text"><a href="#&#x4E00;&#x3001;DNS" class="headerlink" title="&#x4E00;&#x3001;DNS"></a>&#x4E00;&#x3001;DNS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、HTTP"><span class="toc-number">5.0.2.</span> <span class="toc-text"><a href="#&#x4E8C;&#x3001;HTTP" class="headerlink" title="&#x4E8C;&#x3001;HTTP"></a>&#x4E8C;&#x3001;HTTP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、TCP"><span class="toc-number">5.0.3.</span> <span class="toc-text"><a href="#&#x4E09;&#x3001;TCP" class="headerlink" title="&#x4E09;&#x3001;TCP"></a>&#x4E09;&#x3001;TCP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四、cookie和session"><span class="toc-number">5.0.4.</span> <span class="toc-text"><a href="#&#x56DB;&#x3001;cookie&#x548C;session" class="headerlink" title="&#x56DB;&#x3001;cookie&#x548C;session"></a>&#x56DB;&#x3001;cookie&#x548C;session</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#五、缓存的实现方式"><span class="toc-number">5.0.5.</span> <span class="toc-text"><a href="#&#x4E94;&#x3001;&#x7F13;&#x5B58;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;" class="headerlink" title="&#x4E94;&#x3001;&#x7F13;&#x5B58;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;"></a>&#x4E94;&#x3001;&#x7F13;&#x5B58;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#六、浏览器中输入一个url之后会发生什么事情"><span class="toc-number">5.0.6.</span> <span class="toc-text"><a href="#&#x516D;&#x3001;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165;&#x4E00;&#x4E2A;url&#x4E4B;&#x540E;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x4E8B;&#x60C5;" class="headerlink" title="&#x516D;&#x3001;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165;&#x4E00;&#x4E2A;url&#x4E4B;&#x540E;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x4E8B;&#x60C5;"></a>&#x516D;&#x3001;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165;&#x4E00;&#x4E2A;url&#x4E4B;&#x540E;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x4E8B;&#x60C5;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#七、关于跨域"><span class="toc-number">5.0.7.</span> <span class="toc-text"><a href="#&#x4E03;&#x3001;&#x5173;&#x4E8E;&#x8DE8;&#x57DF;" class="headerlink" title="&#x4E03;&#x3001;&#x5173;&#x4E8E;&#x8DE8;&#x57DF;"></a>&#x4E03;&#x3001;&#x5173;&#x4E8E;&#x8DE8;&#x57DF;</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GIT"><span class="toc-number">6.</span> <span class="toc-text"><a href="#GIT" class="headerlink" title="GIT"></a>GIT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题"><span class="toc-number">7.</span> <span class="toc-text"><a href="#&#x95EE;&#x9898;" class="headerlink" title="&#x95EE;&#x9898;"></a>&#x95EE;&#x9898;</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://qm36.github.io/2019/11/22/前端面试知识总结/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://qm36.github.io/2019/11/22/前端面试知识总结/&text=前端面试知识总结(2019-5-24)"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://qm36.github.io/2019/11/22/前端面试知识总结/&title=前端面试知识总结(2019-5-24)"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://qm36.github.io/2019/11/22/前端面试知识总结/&is_video=false&description=前端面试知识总结(2019-5-24)"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=前端面试知识总结(2019-5-24)&body=Check out this article: https://qm36.github.io/2019/11/22/前端面试知识总结/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://qm36.github.io/2019/11/22/前端面试知识总结/&title=前端面试知识总结(2019-5-24)"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://qm36.github.io/2019/11/22/前端面试知识总结/&title=前端面试知识总结(2019-5-24)"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://qm36.github.io/2019/11/22/前端面试知识总结/&title=前端面试知识总结(2019-5-24)"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://qm36.github.io/2019/11/22/前端面试知识总结/&title=前端面试知识总结(2019-5-24)"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://qm36.github.io/2019/11/22/前端面试知识总结/&name=前端面试知识总结(2019-5-24)&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 qumeng
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/QM36">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
